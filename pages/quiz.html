@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Kuis — MeteoMindset</title>
+  <link rel="stylesheet" href="../style/style.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">MetLearn</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+</nav>
+
+<div class="stage">
+  <div class="nebula-layer"></div>
+  <div class="aurora"></div>
+
+  <header class="hero">
+    <h1 class="brand">Kuis</h1>
+    <p class="tag" id="quizTopic">Memuat...</p>
+  </header>
+
+  <main class="main">
+    <div id="levelSelect" class="level-select" aria-label="Pilih level"></div>
+    <div id="levelIndicator" class="level-indicator"></div>
+    <section class="quiz-box pretty-box">
+      <div class="quiz-header">
+        <h2 id="questionText">Memuat soal...</h2>
+        <p id="progress" class="muted small"></p>
+      </div>
+
+      <div class="options">
+        <button class="opt" id="optA">A</button>
+        <button class="opt" id="optB">B</button>
+        <button class="opt" id="optC">C</button>
+      </div>
+    </section>
+  </main>
+</div>
+
+<script src="../script/quiz.js"></script>
+</body>
+</html>

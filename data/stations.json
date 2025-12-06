@@ -1,0 +1,922 @@
+[
+  {
+    "name": "Balai Besar Meteorologi Klimatologi dan Geofisika Wilayah I - Medan",
+    "lat": 3.5398265,
+    "lon": 98.6366698
+  },
+  {
+    "name": "Balai Besar Meteorologi Klimatologi dan Geofisika Wil. II - Tangerang Selatan",
+    "lat": -6.3019322,
+    "lon": 106.7567505
+  },
+  {
+    "name": "Balai Besar Meteorologi Klimatologi dan Geofisika Wil. III - Badung",
+    "lat": -8.7381765,
+    "lon": 115.1788177
+  },
+  {
+    "name": "Balai Besar Meteorologi Klimatologi dan Geofisika Wil. IV - Makassar",
+    "lat": -5.1422204,
+    "lon": 119.4524037
+  },
+  {
+    "name": "Balai Besar Meteorologi Klimatologi dan Geofisika Wil. V - Jayapura",
+    "lat": -2.574756,
+    "lon": 140.6862365
+  },
+  {
+    "name": "Stasiun Geofisika Kelas I Padang Panjang",
+    "lat": -0.4662683,
+    "lon": 100.3800414
+  },
+  {
+    "name": "Stasiun Klimatologi Kelas II Sumatera Barat",
+    "lat": -0.5407132,
+    "lon": 100.3033405
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas II Minangkabau - Padang Pariaman",
+    "lat": -0.7851574,
+    "lon": 100.305272
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas IV Maritim Teluk Bayur - Padang",
+    "lat": -0.9830179,
+    "lon": 100.3829146
+  },
+  {
+    "name": "Stasiun Pemantau Atmosfer Global Bukit Koto Tabang - Agam",
+    "lat": -0.2021237,
+    "lon": 100.3179368
+  },
+  {
+    "name": "Stasiun Geofisika Kelas I Deli Serdang",
+    "lat": 3.939129,
+    "lon": 98.5875021
+  },
+  {
+    "name": "Stasiun Geofisika Kelas III Gunung Sitoli",
+    "lat": 1.3041495,
+    "lon": 97.5753691
+  },
+  {
+    "name": "Stasiun Klimatologi Kelas I Sumatera Utara",
+    "lat": 3.621688,
+    "lon": 98.7149021
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas I Kualanamu - Deli Serdang",
+    "lat": 3.5954721,
+    "lon": 98.8618414
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas II Maritim Belawan - Medan",
+    "lat": 3.7883565,
+    "lon": 98.7148863
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Binaka - Gunung Sitoli",
+    "lat": 1.1653075,
+    "lon": 97.7049516
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III F.L. Tobing - Tapanuli Tengah",
+    "lat": 1.5535162,
+    "lon": 98.897118
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas IV Aek Godang - Padang Sidempuan",
+    "lat": 1.3989455,
+    "lon": 99.4307447
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas II Silangit - Tapanuli Utara",
+    "lat": 2.2626151,
+    "lon": 98.9938615
+  },
+  {
+    "name": "Stasiun Geofisika Kelas III Aceh Besar",
+    "lat": 5.5038127,
+    "lon": 95.2975006
+  },
+  {
+    "name": "Stasiun Geofisika Kelas III Aceh Selatan",
+    "lat": 3.1342096,
+    "lon": 97.3117816
+  },
+  {
+    "name": "Stasiun Klimatologi Kelas IV Aceh",
+    "lat": 5.4110518,
+    "lon": 95.4653469
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas I Sultan Iskandar Muda - Banda Aceh",
+    "lat": 5.5824826,
+    "lon": 95.4139917
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Maimun Saleh - Sabang",
+    "lat": 5.8763031,
+    "lon": 95.3363737
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Malikussaleh - Aceh Utara",
+    "lat": 5.2310203,
+    "lon": 96.9477128
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Cut Nyak Dhien - Nagan Raya",
+    "lat": 4.0498,
+    "lon": 96.24823
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas I Hang Nadim - Batam",
+    "lat": 1.1198771,
+    "lon": 104.113506
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Dabo - Lingga",
+    "lat": -0.4788695,
+    "lon": 104.5778633
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Raja Haji Fisabilillah - Tanjung Pinang",
+    "lat": 1.050705452718,
+    "lon": 103.39246219901804
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Maritim Natuna",
+    "lat": 3.9612639,
+    "lon": 108.3864303
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Tarempa - Kepulauan Anambas",
+    "lat": 3.2166279,
+    "lon": 106.2185662
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas IV Raja Haji Abdullah - Karimun",
+    "lat": 1.0508285,
+    "lon": 103.3924896
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas I Sultan Syarif Kasim II - Pekanbaru",
+    "lat": 0.4646985,
+    "lon": 101.4485979
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Japura - Indragiri Hulu",
+    "lat": -0.3492709,
+    "lon": 102.3351304
+  },
+  {
+    "name": "Stasiun Klimatologi Kelas IV Riau",
+    "lat": 0.887258,
+    "lon": 101.4359063
+  },
+  {
+    "name": "Stasiun Geofisika Kelas I Bandung",
+    "lat": -6.8834227,
+    "lon": 107.5973273
+  },
+  {
+    "name": "Stasiun Klimatologi Kelas I Jawa Barat",
+    "lat": -6.5535807,
+    "lon": 106.7440543
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Kertajati - Majalengka",
+    "lat": -6.6440523,
+    "lon": 108.150521
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Citeko - Bogor",
+    "lat": -6.6978231,
+    "lon": 106.9352228
+  },
+  {
+    "name": "Stasiun Geofisika Kelas III Sukabumi",
+    "lat": -7.005903,
+    "lon": 106.5634259
+  },
+  {
+    "name": "Stasiun Geofisika Kelas I Palu",
+    "lat": -0.9052424976609176,
+    "lon": 119.83667874465483
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas II Mutiara SIS Al-Jufrie - Palu",
+    "lat": -0.9161129397388503,
+    "lon": 119.90523365935991
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Syukuran Aminuddin Amir - Banggai",
+    "lat": -1.041720483785095,
+    "lon": 122.77190445009272
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Kasiguncu - Poso",
+    "lat": -1.4201827717837763,
+    "lon": 120.65715612028535
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Sultan Bantilan - Tolitoli",
+    "lat": 1.1213215752505656,
+    "lon": 120.79425751397207
+  },
+  {
+    "name": "Stasiun Pemantau Atmosfer Global Lore Lindu Bariri - Poso",
+    "lat": -1.041720483785095,
+    "lon": 122.77190445009272
+  },
+  {
+    "name": "Stasiun Geofisika Kelas III Ternate",
+    "lat": 0.7720097168270355,
+    "lon": 127.36665072903016
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas I Sultan Babullah - Ternate",
+    "lat": 0.826541663513182,
+    "lon": 127.38372569772235
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Gamarmalamo - Halmahera Utara",
+    "lat": 1.837884096712632,
+    "lon": 127.78785345962714
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Oesman Sadik - Halmahera Selatan",
+    "lat": -0.6380078260666953,
+    "lon": 127.50073120288774
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Emalamo - Kepulauan Sula",
+    "lat": -2.070487412125325,
+    "lon": 125.97903692970891
+  },
+  {
+    "name": "Stasiun Geofisika Kelas IV Kendari",
+    "lat": -3.957998789307052,
+    "lon": 122.61936265131105
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Betoambari - Baubau",
+    "lat": -5.487872874091332,
+    "lon": 122.57081008386848
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Sangia Ni Bandera - Kolaka",
+    "lat": -4.180439367023441,
+    "lon": 121.61062052157763
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas II Maritim Kendari",
+    "lat": -3.970096136957018,
+    "lon": 122.58968469318447
+  },
+  {
+    "name": "Stasiun Klimatologi Kelas IV Sulawesi Tenggara",
+    "lat": -4.055736086869407,
+    "lon": 122.44908990630309
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas I Djalaluddin - Gorontalo",
+    "lat": 0.6390572817452355,
+    "lon": 122.85244221795703
+  },
+  {
+    "name": "Stasiun Klimatologi Kelas IV Gorontalo",
+    "lat": 0.555826258178015,
+    "lon": 123.14085069823372
+  },
+  {
+    "name": "Stasiun Geofisika Kelas II Gorontalo",
+    "lat": 0.6361161517748575,
+    "lon": 123.01060223163772
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas II Tampa Padang Mamuju",
+    "lat": -2.593477670428383,
+    "lon": 119.01481263024297
+  },
+  {
+    "name": "Stasiun Geofisika Kelas I Jayapura",
+    "lat": -2.5140317310247635,
+    "lon": 140.70612368099447
+  },
+  {
+    "name": "Stasiun Geofisika Kelas III Sorong",
+    "lat": -0.8904882527867116,
+    "lon": 131.28588158999935
+  },
+  {
+    "name": "Stasiun Klimatologi Kelas III Papua",
+    "lat": -0.8903437717651971,
+    "lon": 134.05129678489857
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas I Frans Kaisiepo - Biak Numfor",
+    "lat": -1.191698600602434,
+    "lon": 136.10635307742572
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Maritim Dok II - Jayapura",
+    "lat": -2.537831514644605,
+    "lon": 140.71513712249651
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Enarotali - Paniai",
+    "lat": -3.926809988075545,
+    "lon": 136.38108820297003
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Mararena - Sarmi",
+    "lat": -1.8723367416752876,
+    "lon": 138.75179025777183
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Mopah - Merauke",
+    "lat": -8.518478944397932,
+    "lon": 140.41408749864883
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Sudjarwo Tjondro Negoro - Kepulauan Yapen",
+    "lat": 3.686040457328831,
+    "lon": 125.5287845550476
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Tanah Merah - Boven Digul",
+    "lat": -6.098866701677903,
+    "lon": 140.3011030065516
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Mozez Kilangin - Mimika",
+    "lat": -4.529734324377561,
+    "lon": 136.89322547758704
+  },
+  {
+    "name": "Stasian Meteorologi Kelas III Wamena - Jayawijaya",
+    "lat": -4.088941624746215,
+    "lon": 138.94649489958766
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas I Sentani - Jayapura",
+    "lat": -2.5757072099845604,
+    "lon": 140.5185138836497
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Nabire",
+    "lat": -3.397936998524887,
+    "lon": 135.39637425436604
+  },
+  {
+    "name": "Stasiun Klimatologi Kelas IV Papua Selatan",
+    "lat": -8.386939131805743,
+    "lon": 140.51652742300786
+  },
+  {
+    "name": "Stasiun Geofisika Kelas III Nabire",
+    "lat": -3.376404643513001,
+    "lon": 135.47316998080296
+  },
+  {
+    "name": "Stasiun Klimatologi Kelas III Papua Barat",
+    "lat": -0.8903060843330912,
+    "lon": 134.0512845171375
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas I Domine Eduard Osok - Sorong",
+    "lat": -0.8904833278388895,
+    "lon": 131.28588815171065
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Rendani - Manokwari",
+    "lat": -0.8903452651572825,
+    "lon": 134.05129024574265
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Torea - Fakfak",
+    "lat": -2.918982495949087,
+    "lon": 132.26486073694792
+  },
+  {
+    "name": "Stasiun Meteorologi Kelas III Utarom - Kaimana",
+    "lat": -3.643715295682782,
+    "lon": 133.6971376881203
+  },
+  {
+    "name": "Stasiun Pemantau Atmosfer Global Puncak Vihara Klademak - Sorong",
+    "lat": -0.8797261745898897,
+    "lon": 131.29790263148416
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Pangsuma - Kapuas Hulu",
+    "lat": 0.839203,
+    "lon": 112.934996
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas I Supadio - Pontianak",
+    "lat": -0.1416818,
+    "lon": 109.403102
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Singkawang",
+    "lat": 0.7882016,
+    "lon": 108.958088
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Nangapinoh - Melawi",
+    "lat": -0.3475371,
+    "lon": 111.7503407
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Rahadi Oesman - Ketapang",
+    "lat": -1.8175555,
+    "lon": 109.9621347
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Tebelian Sintang",
+    "lat": -0.0424523,
+    "lon": 111.459542
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas IV Maritim Pontianak",
+    "lat": 0.53982,
+    "lon": 118.50182
+  },
+  {
+    "name": "Stasiun. Klimatologi. Kelas II Kalimantan Barat",
+    "lat": 0.0753858,
+    "lon": 109.1905772
+  },
+  {
+    "name": "Stasiun. Geofisika. Kelas I Sleman",
+    "lat": -7.8160276,
+    "lon": 110.2946183
+  },
+  {
+    "name": "Stasiun. Klimatologi. Kelas IV D.I Yogyakarta",
+    "lat": -7.72303,
+    "lon": 110.35451
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas II Yogyakarta",
+    "lat": -7.89579,
+    "lon": 110.06953
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III H.AS. Hanandjoeddin - Belitung",
+    "lat": -2.75212,
+    "lon": 107.75304
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas I Depati Amir - Pangkal Pinang",
+    "lat": -2.1629,
+    "lon": 106.13705
+  },
+  {
+    "name": "Stasiun. Klimatologi. Kelas IV Bangka Belitung",
+    "lat": -2.518,
+    "lon": 106.42269
+  },
+  {
+    "name": "Stasiun. Geofisika. Kelas I Kupang",
+    "lat": -10.15249,
+    "lon": 123.60838
+  },
+  {
+    "name": "Stasiun. Geofisika. Kelas III Sumba Timur",
+    "lat": -9.66896,
+    "lon": 120.29762
+  },
+  {
+    "name": "Stasiun. Klimatologi. Kelas II Nusa Tenggara Timur",
+    "lat": -9.93244,
+    "lon": 123.62817
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas II El Tari - Kupang",
+    "lat": -10.16762,
+    "lon": 123.67064
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Gewanyantana - Flores Timur",
+    "lat": -8.27499,
+    "lon": 123.00081
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III David Constantijn Saudale - Rote Ndao",
+    "lat": -10.76537,
+    "lon": 123.07378
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Mali - Alor",
+    "lat": -8.13651,
+    "lon": 124.59307
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Umbu Mehang Kunda - Sumba Timur",
+    "lat": -9.66912,
+    "lon": 120.29969
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Frans Sales Lega - Manggarai",
+    "lat": -8.59753,
+    "lon": 120.47802
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Tardamu - Sabu Raijua",
+    "lat": -10.49196,
+    "lon": 121.8459
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Fransiskus Xaverius Seda - Sikka",
+    "lat": -8.63548,
+    "lon": 122.2374
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas IV Komodo - Manggarai Barat",
+    "lat": -8.48629,
+    "lon": 119.88667
+  },
+  {
+    "name": "Stasiun. Geofisika. Kelas III Alor",
+    "lat": -8.14404,
+    "lon": 124.59041
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas IV Maritim Tenau - Kupang",
+    "lat": -10.18829,
+    "lon": 123.52911
+  },
+  {
+    "name": "Stasiun. Geofisika. Kelas II Denpasar",
+    "lat": -8.39454,
+    "lon": 115.26711
+  },
+  {
+    "name": "Stasiun. Klimatologi. Kelas II Bali",
+    "lat": -8.34059,
+    "lon": 114.61749
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas I I Gusti Ngurah Rai - Badung",
+    "lat": -4.78084,
+    "lon": 115.16742
+  },
+  {
+    "name": "Stasiun. Geofisika. Kelas II Pasuruan",
+    "lat": -7.65965,
+    "lon": 112.69013
+  },
+  {
+    "name": "Stasiun . Geofisika. Kelas III Malang",
+    "lat": -8.15226,
+    "lon": 112.45086
+  },
+  {
+    "name": "Stasiun. Geofisika. Kelas III Nganjuk",
+    "lat": -7.73424,
+    "lon": 111.76689
+  },
+  {
+    "name": "Stasiun. Klimatologi. Kelas II Jawa Timur",
+    "lat": -7.81136,
+    "lon": 112.57116
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas I Juanda - Sidoarjo",
+    "lat": -7.37235,
+    "lon": 112.78173
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas II Maritim Tanjung Perak - Surabaya",
+    "lat": -7.20469,
+    "lon": 112.7352
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Banyuwangi",
+    "lat": -8.21478,
+    "lon": 114.3554
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Trunojoyo",
+    "lat": -6.85179,
+    "lon": 113.90421
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Tuban",
+    "lat": -6.82203,
+    "lon": 111.99206
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Sangkapura - Gresik",
+    "lat": -5.85064,
+    "lon": 112.65749
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Dhoho - Kediri",
+    "lat": -7.75491,
+    "lon": 111.94748
+  },
+  {
+    "name": "Stasiun. Geofisika. Kelas III Balikpapan",
+    "lat": -1.25958,
+    "lon": 116.89666
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas I Sultan Aji Muhammad Sulaiman Sepinggan - Balikpapan",
+    "lat": -1.25426,
+    "lon": 116.90471
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Kalimarau - Berau",
+    "lat": 2.14667,
+    "lon": 117.43278
+  },
+  {
+    "name": "Stasiun. Meteorologi. Kelas III Aji Pangeran Tumenggung Pranoto Samarinda",
+    "lat": -0.47884,
+    "lon": 117.15511
+  },
+  {
+    "name": "Sta. Klim. Kelas I Kalimantan Selatan",
+    "lat": -3.461138767088669,
+    "lon": 114.84074103996478
+  },
+  {
+    "name": "Sta. Met. Kelas III Syamsudin Noor - Banjarmasin",
+    "lat": -3.4373465188712675,
+    "lon": 114.75380381349369
+  },
+  {
+    "name": "Sta. Met. Kelas III Gusti Syamsir Alam - Kotabaru",
+    "lat": -3.2999351784990987,
+    "lon": 116.16746872883547
+  },
+  {
+    "name": "Sta. Klim. Kelas I Nusa Tenggara Barat",
+    "lat": -7.871280117567515,
+    "lon": 115.9976969371289
+  },
+  {
+    "name": "Sta. Met. Kelas II Zainuddin Abdul Madjid - Lombok",
+    "lat": -8.758978110622738,
+    "lon": 116.27828919649822
+  },
+  {
+    "name": "Sta. Met. Kelas III Sultan Muhammad Salahuddin - Bima",
+    "lat": -8.538936683998545,
+    "lon": 118.6897981165562
+  },
+  {
+    "name": "Sta. Met. Kelas III Sultan Muhammad Kaharuddin - Sumbawa",
+    "lat": -8.487759784832479,
+    "lon": 117.41352554232911
+  },
+  {
+    "name": "Sta. Geof. Kelas III Mataram",
+    "lat": -8.564034225065361,
+    "lon": 116.0997863
+  },
+  {
+    "name": "Sta. Met. Kelas III Beringin - Barito Utara",
+    "lat": -0.9416224535182501,
+    "lon": 114.8960397287083
+  },
+  {
+    "name": "Sta. Met. Kelas III Iskandar - Kotawaringin Barat",
+    "lat": -2.7046424992875258,
+    "lon": 111.66976283157229
+  },
+  {
+    "name": "Sta. Met. Kelas I Tjilik Riwut - Palangka Raya",
+    "lat": -2.2506571686724124,
+    "lon": 113.94476207989756
+  },
+  {
+    "name": "Sta. Met. Kelas IV Sanggu - Barito Selatan",
+    "lat": -1.6696214143934778,
+    "lon": 114.89785208465825
+  },
+  {
+    "name": "Sta. Met. Kelas IV H. Asan - Kotawaringin Timur",
+    "lat": -2.501631647832739,
+    "lon": 112.97484605335212
+  },
+  {
+    "name": "Sta. Met. Kelas III Juwata - Tarakan",
+    "lat": 3.326933995887146,
+    "lon": 117.57042635139898
+  },
+  {
+    "name": "Sta. Met. Kelas III Tanjung Harapan - Bulungan",
+    "lat": 2.8385310204982623,
+    "lon": 117.37308822921713
+  },
+  {
+    "name": "Sta. Met. Kelas III Yuvai Semaring - Nunukan",
+    "lat": 3.8999006878597164,
+    "lon": 115.69164294417718
+  },
+  {
+    "name": "Sta. Met. Kelas IV Nunukan",
+    "lat": 4.135324492199036,
+    "lon": 117.66576394203949
+  },
+  {
+    "name": "Sta. Geof. Kelas I Ambon",
+    "lat": -3.687017180690414,
+    "lon": 128.19418557116458
+  },
+  {
+    "name": "Sta. Geof. Kelas III Maluku Tenggara Barat",
+    "lat": -5.637196037995224,
+    "lon": 132.7531162423291
+  },
+  {
+    "name": "Sta. Klim. Kelas III Maluku",
+    "lat": -3.338759822609299,
+    "lon": 128.36833179683111
+  },
+  {
+    "name": "Sta. Met. Kelas II Pattimura - Ambon",
+    "lat": -3.710916298564514,
+    "lon": 128.08534745582278
+  },
+  {
+    "name": "Sta. Met. Kelas III Amahai - Maluku Tengah",
+    "lat": -3.346043478565898,
+    "lon": 128.92833342870833
+  },
+  {
+    "name": "Sta. Met. Kelas III Bandaneira - Maluku Tengah",
+    "lat": -4.522356154813374,
+    "lon": 129.90452367116455
+  },
+  {
+    "name": "Sta. Met. Kelas III Karel Sadsuitubun - Maluku Tenggara",
+    "lat": -5.754623476634956,
+    "lon": 132.7582704595189
+  },
+  {
+    "name": "Sta. Met. Kelas III Kuffar Seram Bagian Timur",
+    "lat": -3.8845533497633733,
+    "lon": 130.895238142202
+  },
+  {
+    "name": "Sta. Met. Kelas III Namlea - Buru",
+    "lat": -3.2268352507167584,
+    "lon": null
+  },
+  {
+    "name": "Sta. Met. Kelas III Mathilda Batlayeri - Maluku Tenggara Barat",
+    "lat": null,
+    "lon": 127.09596249604958
+  },
+  {
+    "name": "Sta. Met. Kelas IV Maritim Ambon",
+    "lat": -3.7868752894597275,
+    "lon": 128.0997906297639
+  },
+  {
+    "name": "Sta. Geof. Kelas I Manado",
+    "lat": 1.4456745955328778,
+    "lon": 124.83887993659879
+  },
+  {
+    "name": "Sta. Klim. Kelas II Sulawesi Utara",
+    "lat": 1.5112274068387814,
+    "lon": 124.9166425358414
+  },
+  {
+    "name": "Sta. Met. Kelas II Maritim Bitung",
+    "lat": 1.4482286945106806,
+    "lon": 125.14048409847527
+  },
+  {
+    "name": "Sta. Met. Kelas II Sam Ratulangi - Manado",
+    "lat": 1.538095797391488,
+    "lon": 124.92190599898288
+  },
+  {
+    "name": "Sta. Met. Kelas III Naha - Kepulauan Sangihe",
+    "lat": 3.686174373043593,
+    "lon": 125.52875382883542
+  },
+  {
+    "name": "Sta. Geof. Kelas II Gowa",
+    "lat": -5.217856543434664,
+    "lon": 119.46978855413725
+  },
+  {
+    "name": "Sta. Klim. Kelas I Sulawesi Selatan",
+    "lat": -4.9952674728995845,
+    "lon": 119.57274541926546
+  },
+  {
+    "name": "Sta. Met. Kelas I Sultan Hasanuddin - Makassar",
+    "lat": -5.070053157704912,
+    "lon": 119.5497516864427
+  },
+  {
+    "name": "Sta. Met. Kelas II Maritim Paotere - Makassar",
+    "lat": -5.10863811802818,
+    "lon": 119.42001779103336
+  },
+  {
+    "name": "Sta. Met. Kelas III Andi Djemma - Luwu Utara",
+    "lat": -2.5545608085355327,
+    "lon": 120.32395273434135
+  },
+  {
+    "name": "Sta. Met. Kelas IV Toraja Tana Toraja",
+    "lat": -3.04512905365554,
+    "lon": 119.81877134048109
+  },
+  {
+    "name": "Sta. Geof. Kelas I Tangerang",
+    "lat": -6.17128900014967,
+    "lon": 106.64652743378383
+  },
+  {
+    "name": "Sta. Klim. Kelas II Banten",
+    "lat": -6.260999164715658,
+    "lon": 106.75117870040482
+  },
+  {
+    "name": "Sta. Met. Kelas I Soekarno Hatta - Tangerang",
+    "lat": -6.124853974482762,
+    "lon": 106.65912355789801
+  },
+  {
+    "name": "Sta. Met. Kelas III Budiarto - Tangerang",
+    "lat": -6.2838555685300825,
+    "lon": 106.5696940404212
+  },
+  {
+    "name": "Sta. Met. Kelas I Maritim Merak - Cilegon",
+    "lat": -6.111167022578475,
+    "lon": 106.13189137331538
+  },
+  {
+    "name": "Sta. Geof. Kelas III Kepahiang",
+    "lat": -3.6501943047189753,
+    "lon": 102.59283087353684
+  },
+  {
+    "name": "Sta. Klim. Kelas I Bengkulu",
+    "lat": -3.8650492847628,
+    "lon": 102.31203332876848
+  },
+  {
+    "name": "Sta. Met. Kelas III Fatmawati Soekarno - Bengkulu",
+    "lat": -3.8611257389919036,
+    "lon": 102.34281311048969
+  },
+  {
+    "name": "Sta. Geof. Kelas III Lampung Utara",
+    "lat": -4.835836162023476,
+    "lon": 104.8700064980934
+  },
+  {
+    "name": "Sta. Klim. Pesawaran",
+    "lat": -5.1675311352466675,
+    "lon": 105.18133992141256
+  },
+  {
+    "name": "Sta. Met. Kelas I Radin Inten II - Lampung Selatan",
+    "lat": -5.239621887935075,
+    "lon": 105.17415575758828
+  },
+  {
+    "name": "Sta. Met. Kelas IV Maritim Panjang - Bandar Lampung",
+    "lat": -5.455105074182723,
+    "lon": 105.31082187113053
+  },
+  {
+    "name": "Sta. Klim. Kelas IV Jambi",
+    "lat": -1.6007320591475627,
+    "lon": 103.49440227111062
+  },
+  {
+    "name": "Sta. Met. Kelas III Depati Parbo - Kerinci",
+    "lat": -2.090926287857152,
+    "lon": 101.4620248422457
+  },
+  {
+    "name": "Sta. Met. Kelas I Sultan Thaha - Jambi",
+    "lat": -1.630096965205701,
+    "lon": 103.64255219806742
+  },
+  {
+    "name": "Sta. Met. Kelas I Maritim Tanjung Priok - Jakarta Utara",
+    "lat": -6.107458361893093,
+    "lon": 106.88046597110288
+  },
+  {
+    "name": "Sta. Met. Kelas III Kemayoran - Jakarta Pusat",
+    "lat": -6.155774107142231,
+    "lon": 106.84195003993305
+  }
+]

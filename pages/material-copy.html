@@ -1,0 +1,1632 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>MeteoMindset — Materi</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <nav class="navbar">
+    <div class="logo">MetLearn</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="team.html">Team</a></li>
+    </ul>
+  </nav>
+
+  <div class="stage">
+    <div class="nebula-layer" aria-hidden></div>
+    <div class="aurora" aria-hidden></div>
+
+    <header class="hero">
+      <h1 class="brand" id="pageTitle">MeteoMindset</h1>
+      <p class="tag" id="pageTag">Materi</p>
+    </header>
+
+    <main class="main">
+      <article class="material-card">
+        <h2 id="matTitle"></h2>
+        <p id="matIntro" class="muted"></p>
+
+        <section id="matContent">
+          <!-- Konten materi akan diisi lewat script -->
+        </section>
+
+        
+        <div class="material-actions" id="actionButtons">
+          <a id="openQuizBtn" class="btn primary">Mulai Kuis</a>
+          <a id="backMenuBtn" class="btn secondary" href="index.html">Kembali ke Menu</a>
+        </div>
+      </article>
+    </main>
+  </div>
+
+  <script>
+    // Ambil topic dari URL
+    const params = new URLSearchParams(window.location.search);
+    const topic = params.get('topic');
+
+    const pageTitle = document.getElementById('pageTitle');
+    const pageTag = document.getElementById('pageTag');
+    const matTitle = document.getElementById('matTitle');
+    const matIntro = document.getElementById('matIntro');
+    const matContent = document.getElementById('matContent');
+    const openQuizBtn = document.getElementById('openQuizBtn');
+
+    // Defaultkan tombol ke halaman quiz agar selalu bisa diklik
+    if (openQuizBtn) {
+      openQuizBtn.href = topic ? `quiz.html?topic=${encodeURIComponent(topic)}` : "#";
+    }
+
+    // Fungsi untuk hide/show tombol kuis
+    function hideQuiz() {
+      openQuizBtn.style.display = 'none';
+    }
+
+    if(topic === 'karir') {
+      pageTitle.textContent = "MeteoPath: Karir & Peluang";
+      pageTag.textContent = "Jalur Karir Lulusan Meteorologi";
+      matTitle.textContent = "Prospek Karir Meteorologi";
+      matIntro.textContent = "Di sini kamu bisa melihat jalur karir lulusan meteorologi, peluang kerja, sertifikasi, dan contoh institusi.";
+      matContent.innerHTML = `
+        <ul>
+          <!-- 1. BMKG -->
+<div class="career-card">
+  <img src="img/bmkg.png" alt="Karir BMKG">
+  <h3>🌦️ BMKG — Badan Meteorologi, Klimatologi, dan Geofisika</h3>
+  <ul>
+    <li>Forecaster cuaca & peringatan dini</li>
+    <li>Analis iklim (ENSO, IOD, musim, anomali)</li>
+    <li>Peneliti meteorologi & klimatologi</li>
+    <li>Teknisi instrumentasi (Radar, AWS, satelit)</li>
+    <li>Observer cuaca di stasiun BMKG</li>
+  </ul>
+  <p><a class="img-source" href="https://www.bing.com/images/search?view=detailV2&ccid=BxKwzF2O&id=55CBCA7E3910578E8BB2643EF3B17EBE5019D74D&thid=OIP.BxKwzF2OubPIEwDFTp4eDgHaHa&mediaurl=https%3a%2f%2fdeviloarts.com%2fwp-content%2fuploads%2f2021%2f09%2fBMKG-Logo-Badan-Meteorologi-Klimatologi-dan-Geofisika-1024x1024.png&exph=1024&expw=1024&q=logo+bmkg&FORM=IRPRST&ck=E067FE1E77322949620EE7D293AA2634&selectedIndex=0&itb=0" target="_blank">Sumber gambar</a></p>
+</div>
+
+<!-- 2. BRIN -->
+<div class="career-card">
+  <img src="img/brin.png" alt="BRIN Meteorologi">
+  <h3>🔬 BRIN — Penelitian Atmosfer & Iklim</h3>
+  <ul>
+    <li>Peneliti atmosfer & cuaca tropis</li>
+    <li>Peneliti pemodelan iklim (WRF, RegCM)</li>
+    <li>Analis kualitas udara & polusi</li>
+    <li>Peneliti energi terbarukan (angin & radiasi surya)</li>
+  </ul>
+  <p><a class="img-source" href="https://share.google/images/QIBUUmovwtpoa6gpn" target="_blank">Sumber gambar</a></p>
+</div>
+
+<!-- 3. ESDM -->
+<div class="career-card">
+  <img src="img/esdm.png" alt="ESDM Meteorologi">
+  <h3>⚡ ESDM — Energi & Hidrometeorologi</h3>
+  <ul>
+    <li>Analis potensi energi terbarukan (angin, surya, hidro)</li>
+    <li>Konsultan transisi energi</li>
+    <li>Pengembang sistem hidrometeorologi untuk energi</li>
+  </ul>
+  <p><a class="img-source" href="https://share.google/images/8HC5ZCfkCP7CR0yrf" target="_blank">Sumber gambar</a></p>
+</div>
+
+<!-- 4. BNPB -->
+<div class="career-card">
+  <img src="img/bnpb.png" alt="BNPB Karir">
+  <h3>🚨 BNPB — Kebencanaan Hidrometeorologi</h3>
+  <ul>
+    <li>Analis risiko banjir, kekeringan, badai</li>
+    <li>Spesialis data kebencanaan</li>
+    <li>Perancang sistem peringatan dini</li>
+    <li>Konsultan risiko iklim</li>
+  </ul>
+  <p><a class="img-source" href="https://share.google/images/PrtaYEfQ6jH4yPjm0" target="_blank">Sumber gambar</a></p>
+</div>
+
+<!-- 5. IPCC -->
+<div class="career-card">
+  <img src="img/ipcc.png" alt="IPCC Climate Career">
+  <h3>🌍 IPCC — Climate Science & Global Research</h3>
+  <ul>
+    <li>Peneliti iklim global</li>
+    <li>Kontributor laporan IPCC</li>
+    <li>Ahli mitigasi & adaptasi perubahan iklim</li>
+  </ul>
+  <p><a class="img-source" href="https://share.google/images/V3Rqiw1uGS58nE9yQ" target="_blank">Sumber gambar</a></p>
+</div>
+
+<!-- 6. KLHK -->
+<div class="career-card">
+  <img src="img/klhk.png" alt="KLHK Karir">
+  <h3>🌱 KLHK — Lingkungan & Kebijakan Iklim</h3>
+  <ul>
+    <li>Analis inventarisasi gas rumah kaca</li>
+    <li>Analis polusi udara</li>
+    <li>Perancang kebijakan iklim nasional</li>
+    <li>Staf pengolah data meteorologi–lingkungan</li>
+  </ul>
+  <p><a class="img-source" href="https://share.google/images/7Bh3hi5JcrSVvwSZ3" target="_blank">Sumber gambar</a></p>
+</div>
+
+<!-- 7. Nafas Indonesia -->
+<div class="career-card">
+  <img src="img/nafas.png" alt="Nafas Indonesia">
+  <h3>🌬️ Nafas Indonesia — Environmental Technology</h3>
+  <ul>
+    <li>Analis kualitas udara</li>
+    <li>Data scientist atmosfer & spasial</li>
+    <li>Machine learning untuk polusi & cuaca</li>
+  </ul>
+  <p><a class="img-source" href="https://share.google/images/rdRBKBDbmWs3uW74n" target="_blank">Sumber gambar</a></p>
+</div>
+
+<!-- 8. Pertamina -->
+<div class="career-card">
+  <img src="img/pertamina.png" alt="Pertamina Cuaca">
+  <h3>🔥 Pertamina — Weather & Energy Risk</h3>
+  <ul>
+    <li>Analis risiko cuaca untuk energi & migas</li>
+    <li>Spesialis sustainability & climate risk</li>
+    <li>Analisis cuaca ekstrem untuk operasional</li>
+  </ul>
+  <p><a class="img-source" href="https://share.google/images/mmcW6xa2Tmt5NxYDk" target="_blank">Sumber gambar</a></p>
+</div>
+
+<!-- 9. Maipark -->
+<div class="career-card">
+  <img src="img/maipark.png" alt="Maipark bencana">
+  <h3>🏢 Maipark — Reasuransi Bencana</h3>
+  <ul>
+    <li>Analis risiko hidrometeorologi</li>
+    <li>Modeler kerugian akibat cuaca ekstrem</li>
+    <li>Peneliti indeks risiko bencana</li>
+  </ul>
+  <p><a class="img-source" href="https://share.google/images/YwyVCpM21IJzlfrHA" target="_blank">Sumber gambar</a></p>
+</div>
+
+<!-- 10. Manvis -->
+<div class="career-card">
+  <img src="img/manvis.jpeg" alt="Manvis Instrumentation">
+  <h3>📡 Manvis — Sistem Instrumen & Sensor</h3>
+  <ul>
+    <li>Teknisi sistem observasi cuaca</li>
+    <li>Spesialis radar & sensor atmosfer</li>
+    <li>Konsultan instrumentasi meteorologi</li>
+  </ul>
+  <p><a class="img-source" href="https://www.google.com/imgres?imgurl=https%3A%2F%2Fmedia.licdn.com%2Fdms%2Fimage%2Fv2%2FC4E0BAQH4X0IGU2oCZg%2Fcompany-logo_200_200%2Fcompany-logo_200_200%2F0%2F1630603903490%3Fe%3D2147483647%26v%3Dbeta%26t%3DC_5Fp8ERRCGhZNDQannpwq772nkjwll-ZXTvXQceOtY&tbnid=aXOkOKMUsV_eAM&vet=1&imgrefurl=https%3A%2F%2Fid.linkedin.com%2Fcompany%2Fmanvis-teknologi-enjinering&docid=0dKlDKnQBnbaeM&w=200&h=200&hl=en-GB&source=sh%2Fx%2Fim%2Fm5%2F4&kgs=539ccaf4f0a9cff1&shem=isst" target="_blank">Sumber gambar</a></p>
+</div>
+
+<!-- 11. MNI -->
+<div class="career-card">
+  <img src="img/mni.png" alt="MNI Meteorologi">
+  <h3>🛰️ MNI — Meteo Nusantara Instrumen</h3>
+  <ul>
+    <li>Pengembang instrumen meteorologi</li>
+    <li>Teknisi radar, AWS, dan sensor atmosfer</li>
+    <li>Programmer sistem observasi cuaca</li>
+    <li>Machine learning engineer data cuaca</li>
+  </ul>
+  <p><a class="img-source" href="https://share.google/7MReu48VvmXmWrNJZ" target="_blank">Sumber gambar</a></p>
+</div>
+
+
+<!-- 13. PUPR -->
+<div class="career-card">
+  <img src="img/pupr.png" alt="Logo PUPR">
+  <h3>💧 PUPR – Direktorat Sumber Daya Air</h3>
+  <p>Mengelola risiko hidrometeorologi, bendungan, sungai, dan sistem tata air.</p>
+  <ul>
+    <li>Ahli cuaca untuk perencanaan bendungan</li>
+    <li>Analis hujan ekstrem</li>
+    <li>Model hidrologi berbasis cuaca</li>
+    <li>Dukungan early warning banjir</li>
+  </ul>
+  <p><a class="img-source" href="LINK-SUMBER-PUPR" target="_blank">Sumber logo</a></p>
+</div>
+
+
+<!-- 15. BPBD -->
+<div class="career-card">
+  <img src="img/bpbd.png" alt="Logo BPBD">
+  <h3>🏘️ BPBD – Badan Penanggulangan Bencana Daerah</h3>
+  <p>Unit mitigasi bencana daerah tingkat provinsi/kabupaten.</p>
+  <ul>
+    <li>Forecaster lokal</li>
+    <li>Analis risiko banjir & longsor</li>
+    <li>Pengelola sistem early warning berbasis cuaca</li>
+  </ul>
+  <p><a class="img-source" href="LINK-SUMBER-BPBD" target="_blank">Sumber logo</a></p>
+</div>
+
+<!-- 16. LAPAN/BRIN -->
+<div class="career-card">
+  <img src="img/lapan.png" alt="Logo BRIN">
+  <h3>🛰️ BRIN – Pusat Sains Antariksa (Eks LAPAN)</h3>
+  <p>Fokus satelit cuaca, remote sensing, dan riset atmosfer atas.</p>
+  <ul>
+    <li>Analis data satelit</li>
+    <li>Peneliti dinamika atmosfer</li>
+    <li>Pengembang model atmosfer & aerosol</li>
+    <li>Pengolah citra (MODIS, Himawari, Sentinel)</li>
+  </ul>
+  <p><a class="img-source" href="LINK-SUMBER-BRIN" target="_blank">Sumber logo</a></p>
+</div>
+
+<!-- 17. AirNav -->
+<div class="career-card">
+  <img src="img/airnav.png" alt="Logo AirNav">
+  <h3>✈️ AirNav Indonesia – Navigasi Penerbangan</h3>
+  <p>Menyediakan layanan navigasi penerbangan, sangat bergantung pada cuaca.</p>
+  <ul>
+    <li>Aviation Meteorologist</li>
+    <li>Analis cuaca untuk rute penerbangan</li>
+    <li>Konsultan turbulensi & wind shear</li>
+    <li>Dukungan ATC berbasis info cuaca real-time</li>
+  </ul>
+  <p><a class="img-source" href="LINK-SUMBER-AIRNAV" target="_blank">Sumber logo</a></p>
+</div>
+
+<!-- 18. Maskapai Penerbangan -->
+<div class="career-card">
+  <img src="img/garuda.jpg" alt="Logo Maskapai">
+  <h3>🛫 Maskapai Penerbangan</h3>
+  <p>Cuaca mempengaruhi keselamatan, rute, dan perencanaan bahan bakar.</p>
+  <ul>
+    <li>Aviation Forecaster</li>
+    <li>Meteorological Flight Officer</li>
+    <li>Operational Weather Support</li>
+  </ul>
+  <p><a class="img-source" href="LINK-SUMBER-MASKAPAI" target="_blank">Sumber logo</a></p>
+</div>
+
+
+<!-- 21. Perusahaan Energi -->
+<div class="career-card">
+  <img src="img/pln.png" alt="Logo PLN">
+  <h3>⚡ Perusahaan Energi (PLN, Pertamina, Geothermal)</h3>
+  <p>Cuaca mempengaruhi energi terbarukan, rig migas, dan pembangkit.</p>
+  <ul>
+    <li>Wind & Solar Energy Analyst</li>
+    <li>Marine/Offshore Weather Specialist</li>
+    <li>Risk Analyst cuaca ekstrem</li>
+  </ul>
+  <p><a class="img-source" href="LINK-SUMBER-ENERGI" target="_blank">Sumber logo</a></p>
+</div>
+
+<!-- 22. Startup Teknologi -->
+<div class="career-card">
+  <img src="img/shopee.webp" alt="Logo Startup">
+  <h3>📱 Startup Teknologi & Data</h3>
+  <p>Menggunakan cuaca untuk optimasi logistik & prediksi permintaan.</p>
+  <ul>
+    <li>Data Scientist bidang cuaca</li>
+    <li>Meteorological Data Engineer</li>
+    <li>Weather-based Demand Forecasting</li>
+  </ul>
+  <p><a class="img-source" href="LINK-SUMBER-STARTUP" target="_blank">Sumber logo</a></p>
+</div>
+
+<!-- 23. Media & Penyiaran -->
+<div class="career-card">
+  <img src="img/tv.jpg" alt="Logo Media">
+  <h3>📺 Media & Penyiaran</h3>
+  <p>Menyampaikan info cuaca ke publik.</p>
+  <ul>
+    <li>Penyiar/Presenter Cuaca</li>
+    <li>Penulis naskah info cuaca</li>
+    <li>Visualisasi data cuaca</li>
+  </ul>
+  <p><a class="img-source" href="LINK-SUMBER-MEDIA" target="_blank">Sumber logo</a></p>
+</div>
+
+<!-- 24. Konsultan Cuaca -->
+<div class="career-card">
+  <img src="img/consulting.png" alt="Logo Konsultan">
+  <h3>🏢 Konsultan Cuaca & Klimatologi Swasta</h3>
+  <p>Memberi layanan cuaca untuk konstruksi, pelayaran, event, asuransi, dan industri besar.</p>
+  <ul>
+    <li>Forecaster event outdoor</li>
+    <li>Konsultan risiko banjir & cuaca ekstrem</li>
+    <li>Penyedia prediksi musim</li>
+  </ul>
+  <p><a class="img-source" href="LINK-SUMBER-KONSULTAN" target="_blank">Sumber logo</a></p>
+</div>
+        </ul>
+      `;
+      hideQuiz();
+
+    } else if(topic === 'map-bmkg') {
+      pageTitle.textContent = "BMKG Map Explorer";
+      pageTag.textContent = "Temukan Stasiun BMKG di Seluruh Indonesia";
+      matTitle.textContent = "Peta Interaktif BMKG";
+      matIntro.textContent = "Klik marker untuk melihat nama stasiun dan lokasi BMKG.";
+      matContent.innerHTML = `<div id="map" style="height:600px;"></div>`;
+      
+      hideQuiz();
+
+      // Inisialisasi peta
+      const map = L.map("map").setView([-2.5, 118], 5);
+      L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18 }).addTo(map);
+
+      // Data stasiun BMKG diambil dari file JSON agar lebih ringan
+      fetch("data/stations.json")
+        .then(res => {
+          if (!res.ok) throw new Error("HTTP " + res.status);
+          return res.json();
+        })
+        .then(stations => {
+          stations
+            .filter(s => Number.isFinite(s.lat) && Number.isFinite(s.lon))
+            .forEach(s => {
+              const marker = L.marker([s.lat, s.lon]).addTo(map);
+              marker.bindPopup(`
+                <b>${s.name}</b><br>
+                <a href="https://www.google.com/maps/search/?api=1&query=${s.lat},${s.lon}" target="_blank">
+                  Buka di Google Maps
+                </a>
+              `);
+            });
+        })
+        .catch(err => {
+          console.error("Gagal memuat stations:", err);
+          L.popup()
+            .setLatLng([-2.5, 118])
+            .setContent("Gagal memuat data stasiun.")
+            .openOn(map);
+        });
+
+ } else if(topic === 'pengertian') {
+      pageTitle.textContent = "Meteorologi itu Apa Sih? 🌤️🌧️";
+      pageTag.textContent = "Pengertian Meteorologi";
+      matContent.innerHTML = `<div id="map" style="height:600px;"></div>`;
+      matContent.innerHTML = `
+        <div class="about-container">
+            <h1 class="about-title">🌤️ Apa Itu Meteorologi?</h1>
+    <p class="about-text">
+        Meteorologi adalah cabang ilmu yang mempelajari <b>atmosfer</b> lapisan gas yang menyelimuti Bumi beserta seluruh proses fisika, kimia, dan dinamika yang terjadi di dalamnya. Singkatnya, meteorologi adalah <b>ilmu tentang cuaca</b> dan berbagai fenomena atmosfer seperti angin, awan, hujan, badai, suhu udara, dan tekanan yang berubah setiap hari.
+    </p>
+
+    <p class="about-text">
+        Meteorologi membantu menjelaskan <i>kenapa hujan turun</i>, <i>kenapa angin kencang</i>, <i>kenapa terbentuk kabut</i>, hingga <i>kenapa pesawat harus menghindari awan Cumulonimbus</i>. Observasi lapangan, radar, satelit, dan pemodelan numerik menjadi fondasi utama untuk memprediksi kondisi atmosfer dengan lebih akurat.
+    </p>
+
+    <h2 class="about-subtitle">🔍 Meteorologi Bukan Meteor!</h2>
+    <p class="about-text">
+        Banyak orang keliru mengira meteorologi mempelajari meteor. Padahal, kata “meteorologi” berasal dari Bahasa Yunani:
+    </p>
+
+    <ul class="about-list">
+        <li>🌬️ <i>Meteōron</i> : fenomena di udara</li>
+        <li>📚 <i>Logos</i> : ilmu</li>
+    </ul>
+
+    <p class="about-text">
+        Jadi meteorologi adalah <b>ilmu tentang fenomena atmosfer</b>, sedangkan meteor dipelajari dalam astronomi.
+    </p>
+
+    <h2 class="about-subtitle">🌎 Ruang Lingkup Meteorologi</h2>
+<ul class="about-list">
+
+    <li>
+        🌧️ <b>Presipitasi</b><br>
+        <p>
+        Presipitasi mencakup segala bentuk air yang jatuh dari atmosfer ke permukaan bumi, seperti hujan, gerimis, badai, hujan es, dan salju. 
+        Proses ini terjadi ketika uap air mengembun menjadi awan, lalu partikel-partikelnya membesar dan jatuh akibat gravitasi. 
+        Studi presipitasi mencakup pembentukan awan hujan, proses koalesensi, mekanisme badai, serta pengaruhnya terhadap banjir, siklus air, dan perubahan iklim.
+        </p>
+    </li>
+
+    <li>
+        🌡️ <b>Suhu Udara</b><br>
+        <p>
+        Suhu udara adalah ukuran panas di atmosfer yang dipengaruhi oleh radiasi Matahari, awan, musim, dan kondisi permukaan bumi. 
+        Variasi suhu harian terjadi karena perubahan intensitas penyinaran, pendinginan malam, dan perbedaan sifat permukaan. 
+        Suhu berperan besar dalam pembentukan awan, potensi kabut, konveksi, hingga analisis stabilitas atmosfer.
+        </p>
+    </li>
+
+    <li>
+        💨 <b>Angin</b><br>
+        <p>
+        Angin merupakan gerakan massa udara dari tekanan tinggi ke rendah dan dipengaruhi oleh rotasi bumi (Coriolis), topografi, serta pemanasan wilayah tertentu. 
+        Meteorologi mempelajari angin mulai dari skala kecil seperti angin darat-laut hingga skala besar seperti jetstream dan monsun. 
+        Angin menentukan pergerakan badai, gelombang laut, penyebaran polusi, hingga prakiraan cuaca harian.
+        </p>
+    </li>
+
+    <li>
+        ☁️ <b>Awan</b><br>
+        <p>
+        Awan terbentuk dari pengembunan uap air menjadi tetesan kecil atau kristal es. 
+        Klasifikasi awan seperti cumulus, stratus, dan cirrus menggambarkan kondisi atmosfer tertentu. 
+        Meteorologi mempelajari struktur awan, proses pembentukannya, serta kaitannya dengan hujan, badai, dan perubahan cuaca.
+        </p>
+    </li>
+
+    <li>
+        🌫️ <b>Visibilitas</b><br>
+        <p>
+        Visibilitas adalah jarak pandang yang dapat diamati secara horizontal dan dipengaruhi oleh kabut, asap, embun, serta partikel kecil di udara. 
+        Kondisi ini sangat penting dalam dunia penerbangan, pelayaran, dan transportasi darat. 
+        Meteorolog memantau visibilitas untuk keselamatan dan analisis kondisi lingkungan.
+        </p>
+    </li>
+
+    <li>
+        📉 <b>Tekanan Udara</b><br>
+        <p>
+        Tekanan udara adalah gaya oleh kolom udara yang menekan permukaan bumi. 
+        Sistem tekanan tinggi biasanya menghasilkan cuaca cerah, sedangkan tekanan rendah cenderung membawa awan dan hujan. 
+        Analisis tekanan udara sangat penting dalam memprediksi pola cuaca serta menentukan arah dan kecepatan angin.
+        </p>
+    </li>
+
+    <li>
+        🌀 <b>Cuaca Ekstrem</b><br>
+        <p>
+        Cuaca ekstrem mencakup badai tropis, hujan lebat, angin kencang, petir, gelombang panas, dan fenomena intens lainnya. 
+        Meteorologi mempelajari faktor pembentuknya, seperti ketidakstabilan atmosfer atau suhu laut tinggi, agar dapat memberikan peringatan dini dan mengurangi risiko bencana.
+        </p>
+    </li>
+
+    <li>
+        🌊 <b>Interaksi Atmosfer-Laut</b><br>
+        <p>
+        Laut dan atmosfer saling memengaruhi melalui pertukaran energi, panas, dan uap air. 
+        Fenomena besar seperti El Niño, La Niña, dan MJO menjadi pengontrol utama variasi hujan di wilayah tropis. 
+        Interaksi ini juga sangat penting dalam terbentuknya siklon tropis dan pola cuaca jangka panjang.
+        </p>
+    </li>
+
+</ul>
+
+
+    <h2 class="about-subtitle">🧪 Cabang-Cabang Meteorologi</h2>
+<ul class="about-list">
+
+    <li>
+        📡 <b>Meteorologi Dinamik</b><br>
+        <p>
+        Meteorologi Dinamik mempelajari atmosfer dengan pendekatan fisika dan matematika yang menjelaskan bagaimana udara bergerak, 
+        bagaimana tekanan dan suhu memengaruhi aliran atmosfer, serta bagaimana gelombang atmosfer terbentuk. 
+        Cabang ini membahas gaya-gaya yang bekerja pada massa udara seperti gaya gradien tekanan, Coriolis, dan gesekan. 
+        Meteorologi dinamik menjadi dasar utama dalam pembuatan model cuaca numerik (Numerical Weather Prediction) dan analisis pola cuaca besar seperti monsun, jetstream, hingga siklon.
+        </p>
+    </li>
+
+    <li>
+        📈 <b>Meteorologi Sinoptik</b><br>
+        <p>
+        Meteorologi Sinoptik berfokus pada analisis dan interpretasi data cuaca skala besar menggunakan peta cuaca, citra satelit, radar, 
+        serta pengamatan permukaan. Cabang ini mempelajari posisi front, pusat tekanan, pola angin, dan sistem cuaca global dalam satu waktu tertentu. 
+        Analisis sinoptik sangat penting untuk membuat prakiraan cuaca harian, memahami dinamika badai, serta membuat peringatan dini terhadap cuaca ekstrem.
+        </p>
+    </li>
+
+    <li>
+        🌫️ <b>Meteorologi Fisika</b><br>
+        <p>
+        Meteorologi Fisika mempelajari proses-proses fisik yang terjadi di atmosfer, termasuk pembentukan awan, presipitasi, radiasi matahari, energi panas, aerosol, 
+        dan interaksi antara partikel atmosfer. Cabang ini juga membahas mikrofisika awan seperti pembentukan tetesan hujan dan kristal es, serta pengaruh radiasi terhadap suhu bumi. 
+        Meteorologi fisika sangat penting untuk memahami hujan, badai, kabut, dan perubahan iklim.
+        </p>
+    </li>
+
+    <li>
+        🛰️ <b>Meteorologi Satelit</b><br>
+        <p>
+        Meteorologi Satelit menggunakan data dari satelit cuaca untuk memantau atmosfer dari luar angkasa, termasuk pola awan, suhu permukaan laut, angin, kelembapan, 
+        dan pergerakan badai. Cabang ini memungkinkan observasi skala global secara real-time, sehingga sangat penting untuk deteksi dini siklon tropis, 
+        pemantauan kebakaran hutan, kualitas udara, hingga analisis pola cuaca harian dan musiman.
+        </p>
+    </li>
+
+    <li>
+        🌍 <b>Klimatologi</b><br>
+        <p>
+        Klimatologi mempelajari pola cuaca dalam jangka panjang (30 tahun atau lebih), termasuk tren suhu, curah hujan, angin, serta variabilitas iklim seperti ENSO, MJO, IOD 
+        dan perubahan iklim global. Cabang ini membantu menganalisis musim, pergeseran pola hujan, dampak pemanasan global, serta perencanaan jangka panjang untuk sektor pertanian, 
+        sumber daya air, dan mitigasi bencana.
+        </p>
+    </li>
+
+    <li>
+        ✈️ <b>Meteorologi Penerbangan</b><br>
+        <p>
+        Meteorologi Penerbangan mempelajari kondisi atmosfer yang mempengaruhi keselamatan dan operasional penerbangan, seperti turbulensi, icing, angin permukaan, jetstream, 
+        visibilitas rendah, kabut, serta keberadaan awan cumulonimbus (Cb) yang berbahaya bagi pesawat. Cabang ini menyediakan informasi cuaca untuk bandara, pilot, dan pengatur lalu lintas udara 
+        melalui laporan METAR, TAF, SIGMET, dan peringatan cuaca khusus penerbangan.
+        </p>
+    </li>
+
+</ul>
+
+
+ <h2 class="about-subtitle">⚙️ Teknologi dalam Meteorologi Modern</h2>
+
+<ul class="about-list">
+
+    <!-- SATELIT CUACA -->
+    <li class="tech-item">
+        🛰️ <b>Satelit Cuaca</b>
+        <p class="about-desc">
+            Satelit cuaca digunakan untuk memantau awan, suhu permukaan laut, badai tropis, serta pola cuaca global. 
+            Satelit seperti Himawari-9 dan GOES-16 mampu memberikan citra setiap 10 menit sehingga perubahan cuaca dapat dipantau secara real-time.
+        </p>
+
+        <div class="img-center">
+            <img class="about-img img-compact" src="img/satelit cuaca.jpg" alt="Satelit cuaca">
+            <p class="about-caption">
+                GOES-16, satelit cuaca Amerika Serikat dari layanan satelit meteorologi
+                <br>
+                <a href="https://en.wikipedia.org/wiki/Weather_satellite" target="_blank" class="img-source">Sumber gambar</a>
+            </p>
+        </div>
+    </li>
+
+    <!-- RADAR CUACA -->
+    <li class="tech-item">
+        📡 <b>Radar Cuaca</b>
+        <p class="about-desc">
+            Radar mengirimkan gelombang mikro untuk mendeteksi intensitas hujan, pergerakan badai, hingga potensi puting beliung. 
+            Radar Doppler menjadi alat utama untuk peringatan dini cuaca ekstrem seperti hujan sangat lebat atau badai lokal.
+        </p>
+
+        <div class="img-center">
+            <img class="about-img img-compact" src="img/radar.jpg" alt="Radar cuaca">
+            <p class="about-caption">
+                Tower SST - Tower RADAR BMKG
+                <br>
+                <a href="https://www.megatower.co.id/tower-bmkg-tower-radar-monitoring-cuaca/" 
+                   target="_blank" class="img-source">Sumber gambar</a>
+            </p>
+        </div>
+    </li>
+
+    <!-- LIDAR & SODAR -->
+    <li class="tech-item">
+        🌬️ <b>LIDAR & SODAR</b>
+        <p class="about-desc">
+            LIDAR menggunakan laser untuk memetakan aerosol dan profil angin, sedangkan SODAR menggunakan gelombang suara 
+            untuk menganalisis turbulensi dan struktur atmosfer bawah. Keduanya penting untuk pemodelan kualitas udara.
+        </p>
+
+        <div class="img-center">
+            <img class="about-img img-compact" src="img/lidar.jpg" alt="LIDAR atmosfer">
+            <p class="about-caption">
+                LIDAR
+                <br>
+                <a href="https://www.scoutaerial.com.au/article-lidar-or-photogrammetry/" 
+                   target="_blank" class="img-source">Sumber gambar</a>
+            </p>
+        </div>
+
+        <div class="img-center">
+            <img class="about-img img-compact" src="img/sodar.jpg" alt="SODAR atmosfer">
+            <p class="about-caption">
+                SODAR
+                <br>
+                <a href="https://arm.gov/capabilities/instruments/sodar" 
+                   target="_blank" class="img-source">Sumber gambar</a>
+            </p>
+        </div>
+    </li>
+
+    <!-- NWP - VIDEO -->
+    <li class="tech-item">
+        🖥️ <b>Numerical Weather Prediction (NWP)</b>
+        <p class="about-desc">
+            NWP adalah model komputer yang menghitung evolusi atmosfer menggunakan persamaan fisika dan matematika. 
+            Contohnya ECMWF, GFS, WRF. Hampir semua prakiraan cuaca modern bergantung pada teknologi ini.
+        </p>
+
+       <div class="video-center">
+    <iframe class="video-frame" 
+        src="https://www.youtube.com/embed/IZrsidi1MJ4" 
+        title="How weather models work"
+        frameborder="0" allowfullscreen>
+    </iframe>
+
+    <p class="about-caption">
+        Video penjelasan model cuaca numerik
+        <br>
+        <a href="https://youtu.be/IZrsidi1MJ4" 
+           target="_blank" class="img-source">Sumber video</a>
+    </p>
+</div>
+
+
+    <!-- AWS -->
+    <li class="tech-item">
+        🌡️ <b>Automatic Weather Station (AWS)</b>
+        <p class="about-desc">
+            AWS adalah stasiun cuaca otomatis yang mengukur suhu, tekanan, angin, kelembapan, dan curah hujan setiap beberapa menit.
+            Data AWS sangat penting untuk monitoring cuaca real-time dan sistem peringatan dini.
+        </p>
+
+        <div class="img-center">
+            <img class="about-img img-compact" src="img/aws.jpg" alt="Automatic Weather Station">
+            <p class="about-caption">
+                AWS
+                <br>
+                <a href="https://www.vaisala.com/en/products/weather-environmental-sensors/aws810-solar " 
+                   target="_blank" class="img-source">Sumber gambar</a>
+            </p>
+        </div>
+    </li>
+
+</ul>
+
+
+   <h2 class="about-subtitle">🚀 Manfaat Meteorologi</h2>
+
+<ul class="about-list">
+
+    <li>
+        ✈️ <b>Penerbangan</b>
+        <p class="about-desc">
+            Meteorologi sangat penting dalam dunia penerbangan karena membantu pilot dan ATC memantau kondisi atmosfer 
+            seperti turbulensi, potensi pembentukan awan Cumulonimbus (Cb), wind shear, icing, hingga visibilitas rendah. 
+            Informasi cuaca ini menentukan jalur penerbangan, ketinggian yang aman, dan keputusan lepas landas maupun mendarat. 
+            Tanpa data meteorologi, keselamatan penerbangan berisiko tinggi.
+        </p>
+    </li>
+
+    <li>
+        🌾 <b>Pertanian</b>
+        <p class="about-desc">
+            Petani sangat bergantung pada informasi cuaca untuk menentukan waktu tanam, pemupukan, irigasi, dan panen. 
+            Prakiraan hujan, suhu, kelembapan, hingga potensi kekeringan membantu mencegah gagal panen. 
+            Pola iklim seperti El Niño–La Niña juga memengaruhi hasil pertanian secara luas, sehingga meteorologi berperan 
+            besar dalam ketahanan pangan nasional.
+        </p>
+    </li>
+
+    <li>
+        🌋 <b>Mitigasi Bencana</b>
+        <p class="about-desc">
+            Meteorologi membantu memberikan peringatan dini terhadap bencana hidrometeorologi seperti hujan ekstrem, badai tropis,
+            angin kencang, banjir, dan gelombang tinggi. Data satelit, radar, dan AWS memungkinkan deteksi dini sehingga 
+            masyarakat dapat melakukan evakuasi lebih cepat dan pemerintah dapat merencanakan langkah penanganan bencana secara efektif.
+        </p>
+    </li>
+
+    <li>
+        🌊 <b>Pelayaran & Kelautan</b>
+        <p class="about-desc">
+            Informasi cuaca laut seperti tinggi gelombang, arah angin, arus laut, dan potensi badai sangat penting untuk navigasi kapal. 
+            Meteorologi juga membantu menghindari jalur berbahaya seperti badai tropis atau swell besar. 
+            Prakiraan cuaca maritim melindungi kapal nelayan hingga kapal kargo internasional.
+        </p>
+    </li>
+
+    <li>
+        🏙️ <b>Kota & Lingkungan</b>
+        <p class="about-desc">
+            Meteorologi membantu memantau kualitas udara, memprediksi fenomena Urban Heat Island (UHI), mengukur polusi, 
+            dan memperkirakan kabut asap. Informasi ini penting untuk kesehatan publik dan perencanaan kota, 
+            seperti penentuan ruang hijau, ventilasi alami, serta mitigasi polusi.
+        </p>
+    </li>
+
+    <li>
+        ⚡ <b>Energi</b>
+        <p class="about-desc">
+            Industri energi memanfaatkan meteorologi untuk memprediksi potensi angin bagi turbin angin, intensitas cahaya Matahari 
+            bagi panel surya, serta curah hujan untuk pembangkit listrik tenaga air. Cuaca menentukan efisiensi dan kapasitas 
+            produksi energi terbarukan sehingga sektor energi modern sangat bergantung pada ilmu atmosfer.
+        </p>
+    </li>
+
+</ul>
+
+
+    <h2 class="about-subtitle">🌟 Kesimpulan</h2>
+<p class="about-text">
+    Meteorologi merupakan ilmu yang mempelajari atmosfer beserta proses fisika, kimia, dan dinamika yang membentuk cuaca 
+    sehari-hari maupun fenomena berskala besar. Mulai dari presipitasi, suhu, angin, awan, tekanan udara, visibilitas, 
+    hingga cuaca ekstrem semuanya dijelaskan melalui konsep dan pengamatan meteorologi. Berbagai cabangnya, seperti 
+    meteorologi dinamik, sinoptik, fisika, satelit, klimatologi, hingga meteorologi penerbangan, bekerja saling melengkapi 
+    untuk memahami atmosfer dari skala mikro hingga global.
+</p>
+
+<p class="about-text">
+    Perkembangan teknologi seperti satelit cuaca, radar Doppler, LIDAR–SODAR, Automatic Weather Station, serta model 
+    prediksi numerik (NWP) menjadikan pemantauan dan prakiraan cuaca semakin cepat, akurat, dan real-time. Informasi ini 
+    menjadi fondasi penting bagi berbagai sektor: keselamatan penerbangan, pertanian, mitigasi bencana, pelayaran, 
+    perencanaan kota, hingga energi terbarukan. Singkatnya, meteorologi berperan besar dalam menjaga keberlangsungan 
+    kehidupan, keamanan, dan aktivitas manusia.
+</p>
+
+<p class="about-text" style="font-size:18px;font-weight:bold;text-align:center;margin-top:20px;">
+    <i>tanpa meteorologi, dunia bergerak tanpa arah karena cuaca adalah navigator kehidupan  </i>
+</p>
+<div>
+      `;
+     
+} else if(topic === 'struktur') {
+      pageTitle.textContent = "Struktur Atmosfer";
+pageTag.textContent = "Yuk, kenali lapisan-lapisan langit kita! ☁️✨";
+      matContent.innerHTML = `
+       <div class="about-container">
+
+  <h2 class="about-title">Mengenal Struktur Atmosfer Bumi</h2>
+
+  <ul class="about-list">
+
+    <!-- MENGAPA ATMOSFER PENTING -->
+    <li class="tech-item">
+        🌎 <b>Mengapa Atmosfer Penting?</b>
+
+        <p class="about-desc">
+            “Atmosfer itu kayak selimut favorit kamu: kalau terlalu tipis kamu kedinginan, 
+            kalau terlalu tebal kamu kepanasan. Bedanya… ini selimut satu planet.”
+        </p>
+
+        <p class="about-desc">
+            Selain melindungi dari paparan sinar matahari, atmosfer juga melindungi Bumi 
+            dari meteor yang masuk. Karena gravitasi, benda langit akan tertarik ke Bumi, 
+            tetapi atmosfer bekerja sebagai ‘tameng’ sehingga meteor terkikis sebelum 
+            sampai ke permukaan.
+        </p>
+
+        <div class="img-center">
+            <img class="about-img img-compact" src="img/strukturatmos.png" alt="Peran atmosfer">
+            <p class="about-caption">
+                Struktur Atmosfer
+                <br>
+                <a href="https://geosains.id/penjelasan-lengkap-tentang-lapisan-atmosfer-bumi-dan-manfaatnya/" target="_blank" class="img-source">
+                    Sumber gambar
+                </a>
+            </p>
+        </div>
+    </li>
+
+  </ul>
+
+  <!-- JUDUL BESAR SEBELUM LIST LAPISAN -->
+  <h3 class="about-subtitle">Struktur Lapisan Atmosfer</h3>
+
+  <ul class="about-list">
+
+    <!-- TROPOSFER -->
+    <li class="tech-item">
+        🌍 <b>Troposfer</b>
+        <p class="about-desc">
+            Troposfer adalah lapisan atmosfer terbawah dari permukaan tanah. Di sinilah manusia, tumbuhan, dan hewan hidup. Pada lapisan troposfer, manusia dan makhluk hidup lainnya masih mungkin bernapas. Namun, semakin ke atas dan mendekati batas troposfer, manusia mungkin akan lebih sulit bernapas dan mengalami keringat dingin hingga hipotermia. Ketebalan lapisan troposfer mencapai 12 kilometer dari permukaan Bumi. Fungsinya adalah untuk menjaga kestabilan udara di permukaan Bumi. Troposfer terbentuk dari dua senyawa kimia, yakni karbondioksida dan uap air.
+
+        </p>
+
+
+
+    <!-- STRATOSFER -->
+    <li class="tech-item">
+        ☀️ <b>Stratosfer</b>
+        <p class="about-desc">
+            Stratosfer adalah lapisan kedua atmosfer yang bersuhu dingin dan hanya mengandung ozon. Lapisan inilah yang memiliki fungsi utama untuk melindungi permukaan Bumi dari gelombang sinar ultraviolet yang membahayakan makhluk hidup. Stratosfer diketahui memiliki ketebalan antara 12-50 kilometer dari permukaan Bumi. Lapisan ozon sendiri dalam stratosfer berjarak 35 kilometer dari permukaan Bumi. Sinar matahari yang masuk ke dalam atmosfer biasanya diserap pada lapisan stratosfer.
+        </p>
+
+      
+
+
+    <!-- MESOSFER -->
+    <li class="tech-item">
+        🔥 <b>Mesosfer</b>
+        <p class="about-desc">
+           Mesosfer adalah lapisan ketiga atmosfer di mana terjadi penurunan suhu yang sangat signifikan pada setiap ketinggian. Mesosfer berada pada ketinggian 50-75 kilometer dari permukaan Bumi. Suhu pada lapisan ini sendiri berkurang 0,4 derajat Celcius setiap 100 meter ketinggiannya. Pada lapisan terendah, mesosfer berada pada suhu 10 derajat Celcius. Sementara pada lapisan tertinggi, suhunya bisa mencapai -120 derajat Celcius.
+Namun, justru pada suhu rendah itulah terjadi "pembakaran" setiap benda-benda angkasa yang masuk ke Bumi. Ya, mesosfer memiliki salah satu fungsi utama melindungi Bumi dari masuknya benda-benda langit yang tertarik gravitasi.
+
+        </p>
+
+
+
+    <!-- TERMOSFER -->
+    <li class="tech-item">
+        🌌 <b>Termosfer</b>
+        <p class="about-desc">
+          Termosfer adalah lapisan keempat atmosfer di mana terjadi ionisasi partikel atau molekul. Proses ionisasi mengakibatkan munculnya reaksi perubahan jumlah elektron yang bisa menghasilkan cahaya warna-warni yang indah. Pernah tahu soal Aurora, cahaya menyerupai tirai yang sering muncul di Kutub Utara? Nah, Aurora terjadi pada lapisan termosfer.
+
+Posisi lapisan termosfer berada pada ketinggian 80-100 kilometer di atas permukaan Bumi. Bahkan jika dilihat dari sub lapisannya, ketinggian termosfer bisa mencapai 800 kilometer. Bertolak belakang dengan mesosfer, termosfer memiliki suhu yang amat panas. Yakni antara 40 hingga 1232 derajat Celcius. Lapisan ini juga mengandung muatan listrik sebagai hasil dari proses ionisasi yang terjadi. Ionisasi tersebut juga memberikan efek terhadap perambatan atau pemantulan gelombang dengan frekuensi rendah dan tinggi. Karenanya, lapisan ini kerap dimanfaatkan untuk keperluan penyiaran radio dan televisi.
+
+        </p>
+
+
+    <!-- EKSOSFER -->
+    <li class="tech-item">
+        🪐 <b>Eksosfer</b>
+        <p class="about-desc">
+            Eksosfer adalah lapisan kelima sekaligus terakhir dari atmosfer. Eksosfer berada pada lapisan terluar dengan jarak 800-3260 kilometer dari permukaan Bumi. Interaksi gas antara Bumi dengan luar angkasa terjadi pada lapisan ini. Karena jaraknya terbilang jauh dari permukaan Bumi, gaya gravitasi sangat rendah dan hampir tidak terasa di lapisan terakhir atmosfer. Hal inilah yang menyebabkan interaksi gas luar angkasa bisa terjadi pada eksosfer.
+
+Suhu pada eksosfer bisa mencapai 2.200 derajat Celcius. Eksosfer memiliki unsur hidrogen yang sangat sedikit sehingga kerap memunculkan cahaya zodiakal atau gegenscherin. Lapisan ini juga dikenal dengan nama lapisan ruang antarplanet dan geostasioner. Sebelum mencapai mesosfer, biasanya benda-benda langit yang tertarik ke Bumi paling banyak hancur pada bagian ini.
+
+        </p>
+
+    
+
+  </ul>
+
+</div>
+      `;
+
+   } else if(topic === 'awan') {
+  pageTitle.textContent = "Awan ☁️";
+  pageTag.textContent = "Yuk, kenalan sama macam-macam awan! 🌤️✨";
+  matContent.innerHTML = `
+    <ul class="tech-list">
+
+
+      <!-- PEMBENTUKAN AWAN -->
+      <li class="tech-item">
+        ☁️ <b>Proses Pembentukan Awan</b>
+        <p class="about-desc">
+          Awan terbentuk dari proses <b>kondensasi</b> ketika uap air naik, mendingin, lalu berubah menjadi titik air atau es
+          pada inti kondensasi di atmosfer.
+        </p>
+      </li>
+
+      <!-- AWAN TINGGI -->
+      <li class="tech-item">
+        🌥️ <b>Klasifikasi Awan (WMO) 
+        <br>
+        <li class="tech-item">
+           Awan Tinggi ≥ 6 km</b>
+
+        <p class="about-desc"><b>Cirrus (Ci)</b> – Cirrus merupakan awan yang berada pada ketinggian sangat tinggi, biasanya di atas 6.000 meter. Awan ini berbentuk serat-serat halus memanjang seperti bulu burung atau ekor kuda. Karena tersusun dari kristal es, cirrus tampak sangat tipis dan berwarna putih cerah. Awan ini tidak menghasilkan hujan, tetapi kemunculannya sering menjadi indikator awal bahwa akan terjadi perubahan pola cuaca dalam 24–48 jam, terutama bila jumlahnya semakin banyak atau bergerak cepat ke arah yang sama.</p>
+        <div class="img-center">
+          <img class="about-img img-compact" src="img/cirrus.jpg">
+          <p class="about-caption">
+            <a class="img-source" href="https://commons.wikimedia.org/wiki/File:Cirrus_sky_panorama.jpg" target="_blank">Sumber gambar</a>
+          </p>
+        </div>
+
+        <p class="about-desc"><b>Cirrostratus (Cs)</b> – Cirrostratus adalah awan tinggi berbentuk selimut tipis yang menutupi langit secara menyeluruh. Walaupun menutupi langit, awan ini tetap memungkinkan matahari atau bulan terlihat, seringkali menghasilkan fenomena halo berupa cincin cahaya di sekelilingnya. Cirrostratus terbentuk dari kristal es dan biasanya menandai mendekatnya sistem cuaca basah, seperti hujan lebat atau badai. Jika lapisan cirrostratus makin tebal, cuaca buruk biasanya akan tiba dalam beberapa jam kemudian.</p>
+        <div class="img-center">
+          <img class="about-img img-compact" src="img/cirrostratus.jpg">
+          <p class="about-caption">
+            <a class="img-source" href="https://share.google/YXkhJdf6zwG9LiyyU" target="_blank">Sumber gambar</a>
+          </p>
+        </div>
+
+        <p class="about-desc"><b>Cirrocumulus (Cc)</b> – Awan cirrocumulus muncul pada lapisan atas atmosfer dengan bentuk menyerupai butiran kecil yang tersusun teratur seperti sisik ikan (mackerel sky). Awan ini berukuran kecil, tampak bergerombol, dan terdiri atas kristal es. Cirrocumulus biasanya tidak menimbulkan presipitasi, tetapi kemunculannya pada pagi hari dapat mengindikasikan ketidakstabilan atmosfer yang mungkin berkembang menjadi awan badai pada siang atau sore hari.</p>
+        <div class="img-center">
+          <img class="about-img img-compact" src="img/cirrocumulus.jpg">
+          <p class="about-caption">
+            <a class="img-source" href="https://share.google/gyujk56ErD29z962i " target="_blank">Sumber gambar</a>
+          </p>
+        </div>
+      </li>
+
+      <!-- AWAN MENENGAH -->
+      <li class="tech-item">
+        ☁️ <b>Awan Menengah (2–6 km)</b>
+
+        <p class="about-desc"><b>Altostratus (As)</b> – Altostratus adalah awan peralihan yang terbentuk pada ketinggian menengah, yaitu sekitar 2.000–6.000 meter. Awan ini tampak sebagai lapisan abu-abu merata yang tersebar luas dan cukup tebal untuk menutupi matahari sehingga hanya tampak sebagai cahaya samar. Altostratus sering terbentuk saat terjadi pergerakan massa udara lembap yang naik secara bertahap. Kehadiran altostratus biasanya membawa hujan dengan intensitas ringan hingga sedang, berlangsung lama dan seragam.</p>
+        <div class="img-center">
+          <img class="about-img img-compact" src="img/altostratus.jpeg">
+          <p class="about-caption">
+            <a class="img-source" href=" https://share.google/ghLUhwxHg6uGFrPKB " target="_blank">Sumber gambar</a>
+          </p>
+        </div>
+
+        <p class="about-desc"><b>Altocumulus (Ac)</b> – Altocumulus adalah awan yang muncul pada ketinggian menengah dan berbentuk gumpalan putih atau abu yang memiliki bayangan. Teksturnya lebih tebal dan lebih besar dibanding cirrocumulus. Pola awan ini sering berkelompok atau berderet. Awan altocumulus menjadi tanda bahwa atmosfer sedang berada pada kondisi transisi, dan jika muncul pada pagi hari, biasanya menandakan potensi hujan atau badai pada sore harinya. Jenis awan ini cukup umum terlihat pada wilayah tropis seperti Indonesia.</p>
+        <div class="img-center">
+          <img class="about-img img-compact" src="img/altocumulus.webp">
+          <p class="about-caption">
+            <a class="img-source" href=" https://share.google/images/Nx2TkvAhsW69MepFd" target="_blank">Sumber gambar</a>
+          </p>
+        </div>
+      </li>
+
+      <!-- AWAN RENDAH -->
+      <li class="tech-item">
+        🌫️ <b>Awan Rendah (≤ 2 km)</b>
+
+        <p class="about-desc"><b>Stratus (St)</b> – Awan stratus merupakan awan rendah yang menciptakan kesan seperti kabut yang menggantung di langit. Biasanya terbentuk pada ketinggian kurang dari 2.000 meter. Stratus memiliki warna abu-abu merata dan jarang menunjukkan pola tertentu. Karena berada dekat permukaan, stratus sering menimbulkan gerimis atau drizzle yang sangat halus. Kehadirannya umumnya menandakan cuaca yang stabil tetapi lembab.</p>
+
+        <div class="img-center">
+          <img class="about-img img-compact" src="img/stratus.jpeg">
+          <p class="about-caption">
+            <a class="img-source" href="https://share.google/yoyv1wIasa5t24Fjr  target="_blank">Sumber gambar</a>
+          </p>
+        </div>
+
+        <p class="about-desc"><b>Stratocumulus (Sc)</b> – Stratocumulus adalah awan rendah yang terdiri atas gumpalan-gumpalan besar berbentuk seperti roti sobek dengan celah di antaranya. Berwarna putih hingga abu-abu gelap, stratocumulus menutupi langit tetapi tidak seutuh nimbostratus. Meskipun terlihat tebal, awan ini jarang menghasilkan hujan, kecuali gerimis ringan. Stratocumulus biasanya muncul akibat pergantian massa udara atau proses pendinginan di dekat permukaan bumi.</p>
+        <div class="img-center">
+          <img class="about-img img-compact" src="img/stratocumulus.jpg">
+          <p class="about-caption">
+            <a class="img-source" href="https://share.google/8WY7bjNcz7cDvtzzP " target="_blank">Sumber gambar</a>
+          </p>
+        </div>
+
+        <p class="about-desc"><b>Nimbostratus (Ns)</b> – Nimbostratus merupakan awan hujan yang sangat tebal dan gelap, menutupi langit secara penuh dari horizon ke horizon. Awan ini terbentuk dari proses pengangkatan massa udara lembap dalam skala luas, seperti pada sistem cuaca frontal. Nimbostratus menghasilkan hujan kontinu dengan intensitas ringan hingga sedang, berlangsung lama, dan sering disertai suasana mendung pekat sepanjang hari. Awan ini tidak menghasilkan petir, berbeda dengan cumulonimbus.</p>
+        <div class="img-center">
+          <img class="about-img img-compact" src="img/nimbostratus.jpg">
+          <p class="about-caption">
+            <a class="img-source" href="https://share.google/u9sCFvzd63uEpDKXE " target="_blank">Sumber gambar</a>
+          </p>
+        </div>
+      </li>
+
+      <!-- AWAN VERTIKAL -->
+      <li class="tech-item">
+        ⛰️ <b>Awan Bertingkat Vertikal</b>
+
+        <p class="about-desc"><b>Cumulus (Cu)</b> – Cumulus adalah awan rendah hingga menengah yang berbentuk seperti gumpalan kapas raksasa dengan dasar datar dan puncak mengembang. Awan ini terbentuk dari proses konveksi, ketika udara hangat naik dan mengembun. Cumulus kecil umumnya menandakan cuaca cerah dan kondisi atmosfer yang stabil. Namun, jika awan cumulus tumbuh secara vertikal menjadi besar dan tinggi, ia bisa berkembang menjadi cumulonimbus yang membawa badai.</p>
+        <div class="img-center">
+          <img class="about-img img-compact" src="img/cumulus.jpg">
+          <p class="about-caption">
+            <a class="img-source" href="https://share.google/VoUv6mxng7givtn9Q" target="_blank">Sumber gambar</a>
+          </p>
+        </div>
+
+        <p class="about-desc"><b>Cumulonimbus (Cb)</b> – Cumulonimbus adalah awan badai yang berkembang tinggi secara vertikal hingga mencapai stratosfer, membentuk struktur seperti landasan (anvil) di puncaknya. Awan ini sangat besar, tebal, dan gelap. Cumulonimbus mampu menghasilkan berbagai fenomena cuaca ekstrem seperti hujan deras, petir, angin kencang, hujan es, bahkan tornado. Terbentuk akibat ketidakstabilan atmosfer yang kuat dan konveksi intens. Kemunculan cumulonimbus sangat penting untuk diamati karena berpotensi menyebabkan kondisi cuaca berbahaya.</p>
+        <div class="img-center">
+          <img class="about-img img-compact" src="img/cumulonimbus.jpg">
+          <p class="about-caption">
+            <a class="img-source" href="https://share.google/BEMhexhfy1sB7PFnm " target="_blank">Sumber gambar</a>
+          </p>
+        </div>
+      </li>
+
+    <li class="tech-item">
+  📊 <b>Awan sebagai Indikator Perubahan Cuaca</b>
+
+  <table class="cloud-table">
+    <thead>
+      <tr>
+        <th>Jenis Awan</th>
+        <th>Pertanda Cuaca</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Cirrostratus</td>
+        <td>Hujan akan datang dalam 6–12 jam</td>
+      </tr>
+      <tr>
+        <td>Altocumulus pagi</td>
+        <td>Potensi hujan badai sore</td>
+      </tr>
+      <tr>
+        <td>Cumulus tumbuh cepat</td>
+        <td>Atmosfer labil, peluang badai</td>
+      </tr>
+      <tr>
+        <td>Nimbostratus</td>
+        <td>Hujan lama, intensitas sedang</td>
+      </tr>
+      <tr>
+        <td>Cumulonimbus</td>
+        <td>Hujan ekstrem, kilat, angin kencang</td>
+      </tr>
+    </tbody>
+  </table>
+</li>
+
+
+      <!-- FUNFACT -->
+      <li class="tech-item">
+        ⭐ <b>Awan Langka (Fun Fact)</b>
+
+        <p class="about-desc"><b>Awan Lentikular</b> – Awan lentikular adalah awan berbentuk lensa atau piring terbang (UFO-like) yang sering muncul di sekitar daerah pegunungan. Bentuknya halus, tipis, dan seperti bertumpuk-tumpuk. Awan ini terbentuk ketika angin yang kuat bertiup dari arah horizontal kemudian dipaksa naik oleh topografi seperti gunung atau bukit. Saat udara naik, ia mendingin dan mengembun sehingga membentuk awan dengan pola yang sangat simetris.
+
+Ciri uniknya adalah awan ini tidak bergerak, meskipun angin sangat kencang. Hal itu terjadi karena aliran udara terus-menerus mengalir melalui posisi yang sama sehingga awan tampak “diam di tempat”. Awan lentikular sering dianggap sebagai indikator bahwa kondisi atmosfer sedang mengalami gelombang udara (mountain waves) yang kuat. Kondisi ini juga berbahaya bagi pesawat karena bisa menyebabkan turbulensi.</p>
+        <div class="img-center">
+          <img class="about-img img-compact" src="img/lentikular.jpg">
+          <p class="about-caption">
+            <a class="img-source" href="https://share.google/images/t2Q8vSZKOteQO58aW" target="_blank">Sumber gambar</a>
+          </p>
+        </div>
+
+        <p class="about-desc"><b>Awan Mammatus</b> – Awan mammatus adalah awan yang memiliki bentuk khas berupa deretan gumpalan bulat yang tampak menurun dari bagian bawah awan induknya. Bentuk ini terbentuk ketika terdapat bagian udara di dalam awan, biasanya cumulonimbus yang suhunya lebih rendah dan kelembapannya lebih tinggi dibandingkan udara di sekitarnya. Karena lebih berat, udara tersebut bergerak turun, dan proses pendinginan serta pengembunan yang terjadi selama pergerakan itu menghasilkan pola gumpalan-gumpalan yang teratur. Awan mammatus sering muncul setelah terbentuknya awan badai besar dan menunjukkan bahwa bagian bawah awan sedang mengalami ketidakstabilan atmosfer. Walaupun terlihat dramatis, awan ini bukan penanda bahwa akan muncul tornado atau fenomena cuaca ekstrem lainnya; ia lebih merupakan hasil dari dinamika udara di dalam awan yang kompleks.</p>
+        <div class="img-center">
+          <img class="about-img img-compact" src="img/mammatus.jpeg">
+          <p class="about-caption">
+            <a class="img-source" href="https://share.google/images/cUW5uUKvHXzL2w2uQ" target="_blank">Sumber gambar</a>
+          </p>
+        </div>
+
+        <p class="about-desc"><b>Awan Kelvin–Helmholtz</b> – Awan Kelvin–Helmholtz adalah salah satu awan paling langka dan paling indah, dengan tampilan seperti ombak laut yang membentuk gulungan di langit. Bentuknya menyerupai deretan gelombang yang hampir identik, seolah-olah langit sedang “berselancar”.
+
+Awan ini terbentuk akibat fenomena geseran angin (wind shear) di mana dua lapisan udara yang berbeda kecepatan saling bergesekan. Lapisan udara di atas bergerak lebih cepat daripada di bawahnya; karena itu, permukaannya menjadi tidak stabil dan terbentuklah pola gelombang khas Kelvin–Helmholtz. Fenomena ini sama seperti gelombang yang terbentuk di permukaan laut ketika angin bertiup di atas air.
+
+Awan Kelvin–Helmholtz biasanya menandakan atmosfer yang sangat tidak stabil dan kecepatan angin yang berbeda jauh antar-lapisan. Awan ini jarang sekali bertahan lama, umumnya hanya beberapa menit, karena gelombangnya akan “pecah” begitu struktur udara kembali stabil.</p>
+        <div class="img-center">
+          <img class="about-img img-compact" src="img/kh.jpg">
+          <p class="about-caption">
+            <a class="img-source" href="https://share.google/images/KMhxiVFj1bVOev4Gq" target="_blank">Sumber gambar</a>
+          </p>
+        </div>
+      </li>
+
+    </ul>
+      `;
+
+       } else if(topic === 'fenomena') {
+      pageTitle.textContent = "Fenomena";
+      pageTag.textContent = "Mengenal Berbagai Fenomena Cuaca di Atmosfer";
+matContent.innerHTML = `
+<div class="section-card">
+  <div class="img-center">
+    <img src="img/fenomenaawan.jpeg" alt="Fenomena Cuaca">
+    <p class="about-caption">
+      <a class="img-source" href="https://inet.detik.com/fotoinet/d-7299421/fenomena-cuaca-mencengangkan-hingga-mengerikan-bak-kiamat" target="_blank">Sumber gambar</a>
+    </p>
+  </div>
+  <h2>🌤️ Langit Lagi Apa Hari Ini? Yuk Kenalan Sama Fenomena Cuaca!</h2>
+  <p>
+    Fenomena cuaca itu ibarat “aksi panggungnya” atmosfer, dari hujan, pelangi, sampai badai petir. Semua muncul karena langit lagi main-main sama suhu, kelembapan, tekanan udara, dan angin. Setiap fenomena punya cara munculnya sendiri dan efeknya juga beda-beda.
+  </p>
+</div>
+
+
+  <div class="phenomena-grid">
+    <!-- 1. Hujan -->
+    <div class="phenomena-card">
+      <img src="img/hujan.jpg" alt="Hujan">
+      <h3>🌧️ Hujan</h3>
+      <p>Hujan terbentuk ketika uap air naik ke atmosfer, mendingin, dan mengalami kondensasi menjadi titik air.</p>
+      <ul>
+        <LI>Konvektif: siang hari, intensitas tinggi, durasi singkat</li>
+        <li>Orografis: udara lembab naik pegunungan → mendingin → hujan</li>
+        <li>Frontal: pertemuan massa udara hangat & dingin</li>
+        <li>Ekstrem: curah hujan sangat besar dalam waktu singkat</li>
+      </ul>
+      <p><a class="img-source" href="https://www.kompas.com/tren/read/2025/07/11/101500765/hujan-lebat-dan-angin-kencang-diprediksi-terjadi-11-17-juli-2025-berikut" target="_blank">Sumber gambar</a></p>
+    </div>
+
+    <!-- 2. Badai Petir -->
+    <div class="phenomena-card">
+      <img src="img/badai.jpeg" alt="Badai Petir">
+      <h3>⛈️ Badai Petir</h3>
+      <p>Badai terbentuk dari awan Cumulonimbus (Cb). Gesekan partikel es → muatan listrik → kilat & petir.</p>
+      <ul>
+        <li>Kilat/petir</li>
+        <li>Hujan lebat</li>
+        <li>Angin kencang</li>
+        <li>Kadang disertai hujan es</li>
+      </ul>
+      <p><a class="img-source" href="https://www.detik.com/edu/detikpedia/d-6483421/ternyata-ini-penyebab-badai-petir-bisa-terbentuk" target="_blank">Sumber gambar</a></p>
+    </div>
+
+    <!-- 3. Angin Kencang -->
+    <div class="phenomena-card">
+      <img src="img/angin.jpg" alt="Angin Kencang">
+      <h3>🌬️ Angin Kencang</h3>
+      <p>Terjadi akibat perbedaan tekanan udara yang besar atau arus turun dari awan Cb.</p>
+      <ul>
+        <li>Dampak: kerusakan bangunan ringan, tumbangnya pohon, gelombang laut tinggi</li>
+      </ul>
+     <p><a class="img-source" href="https://www.bing.com/images/search?view=detailV2&ccid=6fSS1tL1&id=E23C939F3D4D6F6F6B40B26EB670D410D7C5ADF3&thid=OIP.6fSS1tL1bbqzraIgfVyaHgHaEK&mediaurl=https%3a%2f%2fwww.rukita.co%2fstories%2fwp-content%2fuploads%2f2022%2f03%2fpenyebab-angin-kencang.jpg&exph=405&expw=720&q=angin+kencang&FORM=IRPRST&ck=4C2EE9CBC3ECAE119D647EFC3F320FFD&selectedIndex=0&itb=0" target="_blank">Sumber gambar</a></p>
+    </div>
+
+    <!-- 4. Kabut -->
+    <div class="phenomena-card">
+      <img src="img/kabut.jpg" alt="Kabut">
+      <h3>🌫️ Kabut</h3>
+      <p>Kumpulan titik air kecil yang menggantung dekat permukaan tanah.</p>
+      <ul>
+        <li>Radiation fog: malam–pagi, permukaan tanah mendingin</li>
+        <li>Advection fog: udara hangat lembap bergerak di atas permukaan dingin</li>
+        <li>Valley fog: kabut di lembah</li>
+      </ul>
+      <p><a class="img-source" href="https://areioutdoorgear.co.id/turun-kabut-saat-di-gunung-ini-alasannya/" target="_blank">Sumber gambar</a></p>
+    </div>
+
+    <!-- 5. Embun & Embun Beku -->
+    <div class="phenomena-card">
+      <img src="img/embun.jpg" alt="Embun & Embun Beku">
+      <h3>💧❄️ Embun & Embun Beku</h3>
+      <ul>
+        <li>Embun: uap air mengembun menjadi titik air di permukaan dingin</li>
+        <li>Frost: suhu < 0°C → uap air langsung jadi kristal es</li>
+      </ul>
+      <p><a class="img-source" href="https://tekno.republika.co.id/berita/pcgyex366/fenomena-embun-beku-diprediksi-berlangsung-hingga-september" target="_blank">Sumber gambar</a></p>
+    </div>
+
+    <!-- 6. Puting Beliung -->
+    <div class="phenomena-card">
+      <img src="img/puting.jpeg" alt="Puting Beliung">
+      <h3>🌪️ Puting Beliung</h3>
+      <ul>
+        <li>Durasi singkat</li>
+        <li>Jalur sempit</li>
+        <li>Kerusakan terarah (funnel)</li>
+      </ul>
+      <p><a class="img-source" href="https://www.cnnindonesia.com/nasional/20241008193608-20-1153090/puting-beliung-hantam-kepri-dan-bali-puluhan-rumah-warga-rusak" target="_blank">Sumber gambar</a></p>
+    </div>
+
+    <!-- 7. Hujan Es -->
+    <div class="phenomena-card">
+      <img src="img/hujanes.webp" alt="Hujan Es">
+      <h3>🌨️ Hujan Es</h3>
+      <p>Hujan es terbentuk dari tetesan air dalam awan Cb yang membeku dan jatuh.</p>
+      <p><a class="img-source" href="https://rri.co.id/cek-fakta/1104513/kenali-tanda-tanda-hujan-es" target="_blank">Sumber gambar</a></p>
+    </div>
+
+    <!-- 8. Pelangi -->
+    <div class="phenomena-card">
+      <img src="img/pelangi.jpg" alt="Pelangi">
+      <h3>🌈 Pelangi</h3>
+      <p>Muncul ketika cahaya matahari dibiaskan oleh tetesan hujan sehingga membentuk spektrum warna.</p>
+      <p><a class="img-source" href="https://www.cnnindonesia.com/edukasi/20230130131609-569-906569/3-proses-terbentuknya-pelangi-di-langit-dan-arti-tiap-warnanya" target="_blank">Sumber gambar</a></p>
+    </div>
+
+    <!-- 9. Awan Gelap -->
+    <div class="phenomena-card">
+      <img src="img/awan-gelap.jpg" alt="Awan Gelap">
+      <h3>☁️🌧️ Awan Gelap / Hujan</h3>
+      <ul>
+        <li>Nimbostratus: awan gelap luas, hujan stabil & lama</li>
+        <li>Cumulonimbus: awan tinggi, badai, petir, hujan ekstrem, angin kencang, hujan es</li>
+      </ul>
+      <p><a class="img-source" href="https://www.kompasiana.com/ripman/5c7759e0bde575648c49d869/awan-gelap-penantang-terang" target="_blank">Sumber gambar</a></p>
+    </div>
+
+    <!-- 10. Suhu Ekstrem -->
+    <div class="phenomena-card">
+      <img src="img/suhu-ekstrem.jpg" alt="Suhu Ekstrem">
+      <h3>🔥❄️ Suhu Ekstrem</h3>
+      <ul>
+        <li>Heatwave: suhu tinggi berhari-hari → dehidrasi, kebakaran hutan</li>
+        <li>Cold Surge: dorongan udara dingin → hujan lebat, angin kencang, penurunan suhu mendadak</li>
+      </ul>
+    </div>
+
+    <!-- 11. Fenomena Optik -->
+    <div class="phenomena-card">
+      <img src="img/fenomena-optik.webp" alt="Fenomena Optik">
+      <h3>🌟 Fenomena Optik Atmosfer</h3>
+      <ul>
+        <li>Halo: cincin cahaya di sekitar matahari/bulan</li>
+        <li>Sundog (Parhelia): matahari kembar</li>
+        <li>Glory: lingkaran warna-warni di sekitar bayangan pesawat/gunung</li>
+        <li>Mirage (Fatamorgana): pembiasan cahaya akibat perbedaan suhu</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section-card fun-fact">
+  <h3>🌟 Fun Fact</h3>
+  <ul>
+    <li>Petir 5x lebih panas dari permukaan matahari (30.000°C!)</li>
+    <li>Pelangi sebenarnya lingkaran penuh, manusia hanya melihat setengahnya</li>
+    <li>Hujan es bisa terjadi di tropis jika arus naik di awan Cb sangat kuat</li>
+  </ul>
+</div>
+`;
+
+
+       } else if(topic === 'parameter') {
+      pageTitle.textContent = "Parameter Meteorologi";
+      pageTag.textContent = "Yuk kenalan sama parameter";
+      matContent.innerHTML = `
+        <ul>
+  <li>
+    <strong> Apa Itu Parameter Meteorologi?</strong>
+    <ul>
+      Parameter meteorologi adalah variabel fisik atmosfer yang diukur untuk memahami kondisi cuaca dan memprediksi keadaan atmosfer di masa depan.
+ Parameter ini diamati menggunakan berbagai instrumen seperti termometer, barometer, anemometer, hygrometer, dan sensor radiasi.
+    </ul>
+  </li>
+
+  <li>
+    <strong> Parameter Meteorologi Yang Diobservasi</strong>
+    <ul>
+      <li>Temperatur</li>
+      <li>Presipitasi</li>
+      <li>Angin</li>
+      <li>Kelembapan</li>
+      <li>Radiasi</li>
+      <li>Tekanan</li>
+      <li>Tutupan Awan</li>
+      <li>Suhu Tanah</li>
+      <li>Tinggi Awan</li>
+      <li>Potensi Evaporasi</li>
+      <li>Visibilitas</li>
+    </ul>
+  </li>
+
+  <li>
+    <strong> Klasifikasi Parameter Meteorologi</strong>
+    <ul>
+      <li>Parameter Prognostik</li>
+      Parameter yang digunakan dalam persamaan pengatur atmosfer untuk memprediksi kondisi atmosfer.
+      <li>Parameter Diagnostik</li>
+      Parameter yang tidak digunakan dalam proses prediksi atmosfer, parameter yang diturunkan dari parameter prognostik, atau parameter yang diamati sebagai akibat dari suatu proses atmosfer.
+      <li>Parameter Hidrometeorologi (High Impact Model)</li>
+      Bisa berupa parameter prognostik maupun diagnostik yang digunakan untuk memahami dan memprediksi kondisi hidrometeorologis.
+<li>Parameter lain (biasanya untuk penerbangan atau pelayaran )</li>
+kondisi cuaca saat ini dan tendensinya, visibilitas, jumlah petir.
+    </ul>
+  </li>
+
+  <li>
+    <strong> Parameter Prognostik</strong>
+    <ul>
+      <strong><li>Temperatur</li></strong>
+      Temperatur adalah ukuran energi kinetik rata-rata molekul udara yang menentukan seberapa panas atau dingin atmosfer.
+ Satuan: Derajat Celsius (°C), Derajat Fahrenheit (°F), Kelvin.
+ Instrumen: Termometer.
+      <strong><li>Kelembapan</li></strong>
+      Kelembapan merepresentasikan jumlah uap air di udara.
+ <br>Jenis kelembapan:<br>
+1. Kelembapan absolut (g/m³)<br>
+2. Kelembapan spesifik (g/kg)<br>
+3. Mising ratio (g/kg)<br>
+4. Kelembapan relatif (%)<br>
+Instrumen: Higrometer dan psikrometer.
+    </ul>
+  </li>
+
+  <strong> Tekanan </strong><br>
+    Tekanan atmosfer adalah gaya yang diberikan oleh berat molekul udara di atas suatu area.
+ Satuan: Inches of Mercury (inHg), milibar (mb), hektopascal (hPa).
+ Instrumen: Barometer.
+  </li>
+
+  <li>
+    <strong> Angin : Laju dan Arah</strong>
+    <ul>
+Kecepatan angin adalah laju pergerakan udara secara horizontal.
+ Satuan kecepatan: meter per detik (m/s), knot.
+ Arah angin adalah arah asal angin. Misalnya “angin utara” berarti angin bertiup dari utara.
+ Satuan arah: derajat (°) dari utara, searah jarum jam.
+ Instrumen: Anemometer.
+    </ul>
+  </li>
+</ul>
+
+<li>
+    <strong> Angin : Komponen Vektor (u dan v)</strong>
+    <ul>
+Angin merupakan besaran vektor, artinya memiliki kecepatan dan arah.
+ Komponen vektor angin dalam sistem koordinat Kartesian adalah sebagai berikut:
+Komponen u (angin zonal)<br>
+Komponen angin dalam arah barat–timur.<br>
+<li>Nilai u positif: angin bertiup dari barat menuju ke timur.</li>
+
+
+<li>Nilai u negatif: angin bertiup dari timur menuju ke barat.</li>
+
+
+Komponen v (angin meridional)<br>
+Komponen angin dalam arah selatan–utara.<br>
+<li>Nilai v positif: angin bertiup dari selatan menuju ke utara.</li>
+
+
+<li>Nilai v negatif: angin bertiup dari utara menuju ke selatan.</li>
+
+    </ul>
+  </li>
+</ul>
+
+<li>
+    <strong> Radiasi</strong>
+    <ul>
+Radiasi adalah energi yang dipancarkan oleh matahari dalam bentuk gelombang elektromagnetik, termasuk cahaya tampak, ultraviolet, dan inframerah.<br>
+ Satuan: Watt per meter persegi (W/m²).<br>
+Sebelum adanya instrumen digital, durasi penyinaran matahari diamati menggunakan Bola Campbell-Stokes.<br>
+Instrumen radiasi lainnya meliputi:<br>
+<li>Pyranometer</li>
+<li>Pyrgeometer</li>
+<li>Pyrheliometer</li>
+<li>Netradiometer</li>
+
+    </ul>
+  </li>
+</ul>
+
+<li>
+    <strong> Parameter Diagnostik</strong>
+    <ul>
+<li>Presipitasi</li>
+Presipitasi adalah segala bentuk air, baik cair maupun padat, yang jatuh dari awan ke permukaan bumi (seperti hujan, salju, hujan es).
+ Hujan didefinisikan sebagai tetes air yang jatuh dengan diameter sama dengan atau lebih besar dari 0,5 mm.
+ Intensitas hujan adalah laju jatuhnya hujan dalam periode tertentu dan biasanya diukur dalam mm per jam (mm/jam).
+ Instrumen: Penakar hujan (rain gauge).<br>
+<li>Tutupan Awan</li>
+Tutupan awan adalah fraksi langit yang tertutup awan pada waktu tertentu.
+ Satuan:
+Okta (0–8), 0 berarti cerah, 8 berarti tertutup sepenuhnya.
+Persentase (%) tutupan langit.
+ Instrumen: ceilometer atau pengamatan visual.<br>
+<li>Konsentrasi Gas/Konstituen Atmosfer
+Konsentrasi gas merujuk pada jumlah gas tertentu yang terdapat di udara.
+ Satuan: parts per million (ppm), mikrogram per meter kubik (µg/m³).
+ Instrumen: Gas analyzer (CO₂/H₂O gas analyzer).</li>
+    </ul>
+  </li>
+</ul>
+
+<li>
+    <strong> Parameter Hidrometeorologi</strong>
+    <ul>
+      Evapotranspirasi
+Evapotranspirasi merupakan gabungan dari evaporasi dan transpirasi.
+<br>
+1. Evaporasi adalah proses perubahan air dari permukaan tanah, badan air, atau kanopi tanaman menjadi uap air.<br>
+2. Transpirasi adalah proses pelepasan uap air melalui stomata pada daun tanaman.</li>
+Satuan: umumnya mm/hari. <br>
+Instrumen: Evaporimeter/panci evaporasi (evaporation pan). <br>
+
+<ul> Tinggi Muka Air 
+<li>Tutupan Awan</li>
+Tutupan awan adalah fraksi langit yang tertutup awan pada waktu tertentu. <br>
+Satuan: Okta (0–8), 0 berarti cerah, 8 berarti tertutup sepenuhnya.
+Persentase (%) tutupan langit.
+ Instrumen: ceilometer atau pengamatan visual.<br>
+<li>Konsentrasi Gas/Konstituen Atmosfer
+Konsentrasi gas merujuk pada jumlah gas tertentu yang terdapat di udara.
+ Satuan: parts per million (ppm), mikrogram per meter kubik (µg/m³).
+ Instrumen: Gas analyzer (CO₂/H₂O gas analyzer).</li>
+    </ul>
+  </li>
+</ul>
+
+      `;
+
+       } else if(topic === 'alat') {
+      pageTitle.textContent = "Alat Meteorologi";
+      pageTag.textContent = "Penasaran ga sih, apa aja alat-alat untuk mengukur cuaca di bumi ini";
+      matContent.innerHTML = `
+        <ul>
+          <h2>Taman Alat</h2>
+          <div class="img-center">
+            <img class="about-img img-compact" src="img/taman-alat.png" alt="Automatic Weather Station">
+            <p class="about-caption">
+                Taman Alat ITB
+                <br
+            </p>
+        </div>
+
+  <h3>Apa itu Taman Alat?</h3>
+  <p>
+    Taman alat adalah area terbuka tempat berbagai instrumen pengamatan cuaca
+    dipasang untuk mengukur parameter meteorologi secara langsung. Area ini
+    dibuat dengan standar tertentu agar pengukuran tidak terpengaruh oleh
+    bangunan, vegetasi, atau gangguan lingkungan.
+  </p>
+
+  <h3>
+    <li class="tech-item">
+    Alat-Alat Utama</h3>
+  <ul> 
+   <strong> 1. Termometer </strong> <br> 
+      Alat yang digunakan untuk mengukur suhu udara dengan tingkat ketelitian tertentu, sehingga dapat menggambarkan kondisi termal atmosfer pada suatu lokasi.
+    <div class="img-center">
+            <img class="about-img img-compact" src="img/Termometer.jpg" alt="Automatic Weather Station">
+            <p class="about-caption">
+                Termometer
+                <br>
+                <a href="https://www.google.com/url?sa=i&url=https%3A%2F%2Falat-ukur.co.id%2Fproduct%2Falat-ukur-suhu-dan-kelembaban-udara-amf051%2F&psig=AOvVaw0uw-pXxkQxb4uVCoZtKsvy&ust=1764840611270000&source=images&cd=vfe&opi=89978449&ved=2ahUKEwjZ24PfjaGRAxUpk2MGHXjpD1UQjRx6BAgAEBo " 
+                   target="_blank" class="img-source">Sumber gambar</a>
+            </p>
+        </div>
+    <strong>2. Barometer </strong><br> 
+    Instrumen yang digunakan untuk mengukur tekanan atmosfer, sehingga dapat menunjukkan perubahan kondisi cuaca dan dinamika massa udara di suatu wilayah
+</li>
+    <div class="img-center">
+            <img class="about-img img-compact" src="img/Barometer.jpeg" alt="Automatic Weather Station">
+            <p class="about-caption">
+                Barometer
+                <br>
+                <a href="https://share.google/d3BPh0DRDHNKogxkf" 
+                   target="_blank" class="img-source">Sumber gambar</a>
+            </p>
+        </div>
+  <strong>3. Higrometer </strong> <br> 
+    Alat yang digunakan untuk mengukur kelembapan udara, sehingga dapat mengetahui jumlah uap air yang terkandung di atmosfer pada suatu waktu.
+</li>
+    <div class="img-center">
+            <img class="about-img img-compact" src="img/Higrometer.png" alt="Automatic Weather Station">
+            <p class="about-caption">
+                Higrometer
+                <br>
+                <a href="https://share.google/images/KPlnN5oVzOnAOg9sr" 
+                   target="_blank" class="img-source">Sumber gambar</a>
+            </p>
+        </div>
+    <strong>4. Anemometer </strong> <br>
+    Instrumen yang digunakan untuk mengukur kecepatan angin, sehingga dapat menggambarkan intensitas dan dinamika pergerakan udara di atmosfer.
+</li>
+    <div class="img-center">
+            <img class="about-img img-compact" src="img/Anemometer.jpg" alt="Automatic Weather Station">
+            <p class="about-caption">
+                Anemometer
+                <br>
+                <a href="https://share.google/e6vGNearl77blCFzI" 
+                   target="_blank" class="img-source">Sumber gambar</a>
+            </p>
+        </div>
+   <strong> 5. Wind Vane  </strong><br> </strong>
+    Alat yang digunakan untuk menentukan arah angin, sehingga dapat menunjukkan dari mana angin berasal pada suatu waktu pengamatan.
+</li>
+    <div class="img-center">
+            <img class="about-img img-compact" src="img/Wind Vane.webp" alt="Automatic Weather Station">
+            <p class="about-caption">
+                Wind Vane
+                <br>
+                <a href="https://share.google/images/wYvUkEWEG3QfCZnl0" 
+                   target="_blank" class="img-source">Sumber gambar</a>
+            </p>
+        </div>
+    <strong> 6.Rain Gauge (Ombrometer) <br> </strong>
+    Instrumen yang digunakan untuk mengukur jumlah curah hujan yang jatuh pada suatu periode waktu tertentu, sehingga dapat menggambarkan intensitas serta distribusi presipitasi di suatu wilayah.
+</li>
+    <div class="img-center">
+            <img class="about-img img-compact" src="img/Rain Gauge.jpeg" alt="Automatic Weather Station">
+            <p class="about-caption">
+                Rain Gauge
+                <br>
+                <a href="https://share.google/images/gCdER2NOROjaHMXBB" 
+                   target="_blank" class="img-source">Sumber gambar</a>
+            </p>
+        </div>
+   <strong> 7. Campbell-Stokes Sunshine Recorder <br> </strong>
+    Alat yang digunakan untuk mengukur durasi penyinaran matahari, sehingga dapat memberikan informasi mengenai lamanya waktu sinar matahari mencapai permukaan bumi dalam satu hari pengamatan.
+</li>
+    <div class="img-center">
+            <img class="about-img img-compact" src="img/Campbell Stokes.jpg" alt="Automatic Weather Station">
+            <p class="about-caption">
+                Campbell Stokes
+                <br>
+                <a href="https://share.google/dd6jhteiwxdCRsMIZ" 
+                   target="_blank" class="img-source">Sumber gambar</a>
+            </p>
+    
+        </div>
+  <strong>  8. Radiosonde <br> </strong>
+    Perangkat pengamatan yang diterbangkan menggunakan balon cuaca untuk mengukur suhu, kelembaban, dan tekanan udara secara vertikal pada berbagai ketinggian atmosfer.
+</li>
+    <div class="img-center">
+            <img class="about-img img-compact" src="img/Radiosonde.jpg" alt="Automatic Weather Station">
+            <p class="about-caption">
+                Radiosonde
+                <br>
+                <a href="https://share.google/images/83FADdOIFPfp1Iky3" 
+                   target="_blank" class="img-source">Sumber gambar</a>
+            </p>
+        </div>
+  </ul>
+
+  <h3>
+    <li class="tech-item">
+    Fungsi Taman Alat</h3>
+  <ul>
+    1.  Sebagai pusat pengamatan cuaca harian.<br>
+    2. Sumber data klimatologi jangka panjang.<br>
+    3. Validasi model cuaca dan data satelit.</li>
+  </ul>
+
+  <h3>
+    <li class="tech-item">
+    Tabel Jarak Taman Alat ITB 1</h3>
+
+  <table class="alat-table">
+    <thead>
+      <tr>
+        <th>Alat / Parameter</th>
+        <th>Jarak</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>Panjang taman alat</td><td>8,25 meter</td></tr>
+      <tr><td>Lebar taman alat</td><td>11,9 meter</td></tr>
+      <tr><td>Panci evaporimeter timur - pagar</td><td>1,48 meter</td></tr>
+      <tr><td>Panci evaporimeter barat - rain gauge</td><td>1,19 meter</td></tr>
+      <tr><td>Evaporimeter barat - wind cup timur</td><td>2,5 meter</td></tr>
+      <tr><td>Windcup barat - pagar</td><td>1,65 meter</td></tr>
+      <tr><td>Windcup selatan - pagar</td><td>1,58 meter</td></tr>
+      <tr><td>Panci evaporimeter & evaporimeter</td><td>1,58 meter</td></tr>
+      <tr><td>Sangkar meteorologi - pagar</td><td>2,11 meter</td></tr>
+      <tr><td>Campbell-Stokes - pagar</td><td>2,11 meter</td></tr>
+      <tr><td>Campbell timur - pagar</td><td>2,28 meter</td></tr>
+      <tr><td>Campbell barat - sangkar meteorologi</td><td>3,77 meter</td></tr>
+      <tr><td>Rain gauge otomatis utara - pagar</td><td>2,15 meter</td></tr>
+      <tr><td>Jarak antar rain gauge otomatis</td><td>1,3 meter</td></tr>
+      <tr><td>Rain gauge timur - pagar</td><td>3,05 meter</td></tr>
+      <tr><td>Rain gauge selatan - rain gauge utara</td><td>2 meter</td></tr>
+      <tr><td>Merah barat - pagar</td><td>4,28 meter</td></tr>
+      <tr><td>Merah selatan - rain gauge utara</td><td>1,2 meter</td></tr>
+    </tbody>
+  </table>
+
+
+  <h3>
+    <li class="tech-item">
+    Tabel Jarak Taman Alat ITB 2</h3>
+
+  <table class="alat-table">
+    <thead>
+      <tr>
+        <th>Alat / Parameter</th>
+        <th>Jarak</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr><td>AWS Barat - pagar</td><td>1,18 meter</td></tr>
+    </tbody>
+  </table>
+
+<h3>
+    <li class="tech-item">
+   Pentingnya Perawatan & Kalibrasi Alat</h3>
+</ul>
+<ul style="margin-left: 20px;">
+  <li>Membersihkan alat secara rutin (rain gauge mudah tersumbat daun/serangga).</li>
+  <li>Mengecek ketinggian alat agar tidak berubah karena tanah ambles.</li>
+  <li>Memastikan alat seperti rain gauge dan evaporimeter tetap horizontal (level).</li>
+  <li>Mengganti kertas Campbell-Stokes dan membersihkan bola pembakar.</li>
+  <li>Mengecek baterai & panel surya AWS.</li>
+</ul>
+
+<ul>
+  <li><strong>Kalibrasi Rutin</strong></li>
+</ul>
+<ul style="margin-left: 20px;">
+  <li>Termometer / higrometer → dicocokkan dengan standar laboratorium.</li>
+  <li>Anemometer → diuji kecepatan putarannya.</li>
+  <li>Pressure sensor → dibandingkan dengan barometer referensi.</li>
+</ul>
+
+<ul>
+  <li><strong>Gangguan Pengukuran</strong></li>
+</ul>
+<ul style="margin-left: 20px;">
+  <li><strong>Bayangan</strong> <br>
+    Pohon/gedung dapat mengurangi curah hujan masuk dan mengganggu pengamatan penyinaran.</li>
+  <li><strong>Genangan Air</strong> <br>
+    memengaruhi suhu dan kelembapan dekat permukaan.</li>
+  <li><strong>Bangunan sekitar</strong> <br>
+    menghambat angin, memantulkan panas, dan mengubah arah angin.</li>
+  <li><strong>Vegetasi</strong> <br>
+     rumput tinggi bisa menghambat angin dan menghalangi rain gauge.</li>
+  <li><strong>Sumber panas</strong> <br>
+    aspal, AC outdoor, atau knalpot dapat menaikkan suhu lokal.</li>
+</ul>
+
+
+      `;
+
+     } else if(topic === 'kuis-general') {
+      pageTitle.textContent = "KUIS";
+      pageTag.textContent = "ayo latih pemahamanmu disini";
+      matContent.innerHTML = `
+        <ul>
+          <h3>Udah baca materi meteorologi?</h3>
+<p>
+  Sekarang saatnya ngetes pemahamanmu! 🌦️
+  Coba kerjain quiz ini dan lihat seberapa jauh kamu nangkep konsepnya.
+  Semangat! 🚀
+</p>
+
+          </ul>
+      `;
+
+  } else {
+      // ============= MATERI BIASA + KUIS =============
+      pageTitle.textContent = "Materi Meteorologi";
+      pageTag.textContent = "Pelajari & Tantang Dirimu!";
+      matTitle.textContent = "Judul Materi: " + topic;
+      matIntro.textContent = "Ringkasan materi topik " + topic;
+      matContent.innerHTML = `<p>Isi materi lengkap untuk ${topic} akan ditampilkan di sini.</p>`;
+
+      // *** FIX PALING PENTING ***
+      openQuizBtn.style.display = "inline-block";
+
+    }
+  </script>
+
+
+
+  <!-- Script.js selalu paling bawah -->
+  <script src="script.js" defer></script>
+
+
+</body>
+</html>

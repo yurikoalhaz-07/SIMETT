@@ -1,0 +1,73 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>BMKG Map Explorer</title>
+  <link rel="stylesheet" href="../style/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css">
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="logo">MetLearn</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Home</a></li>
+    <li><a href="about.html">About</a></li>
+    <li><a href="team.html">Team</a></li>
+  </ul>
+</nav>
+
+<div class="stage">
+  <div class="nebula-layer"></div>
+  <div class="aurora"></div>
+
+  <header class="hero">
+    <h1 class="brand">MeteoMindset</h1>
+    <p class="tag">BMKG Map Explorer</p>
+  </header>
+
+  <main class="main">
+    <article class="material-card">
+      <h2>BMKG Map Explorer</h2>
+      <p class="muted">Temukan stasiun BMKG di seluruh Indonesia.</p>
+      <div id="map" style="height:520px;border-radius:14px;overflow:hidden;margin-top:12px"></div>
+      <p class="muted" style="margin-top:8px">Zoom untuk melihat detail setiap stasiun.</p>
+    </article>
+  </main>
+</div>
+
+<script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+<script src="../script/page.js"></script>
+<script>
+  const map = L.map("map").setView([-2.5, 118], 5);
+  L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom: 18 }).addTo(map);
+
+  fetch("../data/stations.json")
+    .then(res => {
+      if (!res.ok) throw new Error("HTTP " + res.status);
+      return res.json();
+    })
+    .then(stations => {
+      stations
+        .filter(s => Number.isFinite(s.lat) && Number.isFinite(s.lon))
+        .forEach(s => {
+          const marker = L.marker([s.lat, s.lon]).addTo(map);
+          marker.bindPopup(`
+            <b>${s.name}</b><br>
+            <a href="https://www.google.com/maps/search/?api=1&query=${s.lat},${s.lon}" target="_blank">
+              Buka di Google Maps
+            </a>
+          `);
+        });
+    })
+    .catch(err => {
+      console.error(err);
+      L.popup()
+        .setLatLng([-2.5, 118])
+        .setContent("Gagal memuat data stasiun.")
+        .openOn(map);
+    });
+</script>
+</body>
+</html>
